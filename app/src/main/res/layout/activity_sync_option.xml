@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72726e"
+    android:gravity="center"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <Button
+        android:id="@+id/LoginWithOutSync"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_unselected_button"
+        android:onClick="loginSync"
+        android:text="Login Without Sync" />
+
+    <Button
+        android:id="@+id/LoginWithSync"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/LoginWithOutSync"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_unselected_button"
+        android:onClick="loginSync"
+        android:text="Login With Sync" />
+
+</RelativeLayout>

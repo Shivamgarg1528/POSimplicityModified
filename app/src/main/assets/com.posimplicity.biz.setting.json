@@ -1,0 +1,297 @@
+{
+  "appSetting": {
+    "drawer": {
+      "credit": 0,
+      "cash": 1,
+      "check": 2,
+      "reward": 3,
+      "custom1": 4,
+      "custom2": 5,
+      "detail": [
+        {
+          "name": "Credit",
+          "enable": true,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Cash",
+          "enable": true,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Check",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Rewards",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Custom Tender 1",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Custom Tender 2",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ]
+    },
+    "gateway": {
+      "tsysPay": {
+        "userName": "A",
+        "password": "A",
+        "deviceId": "A",
+        "merchantId": "A",
+        "key": ""
+      },
+      "plugNPay": {
+        "plugNPayId": ""
+      },
+      "bridgePay": {
+        "userName": "",
+        "userPassword": ""
+      },
+      "proPay": {
+        "payerId": ""
+      },
+      "singleChoiceMode": true,
+      "detail": [
+        {
+          "name": "PLUG-N-PAY",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "BRIDGE-PAY",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "TSYS",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "PRO-PAY",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "DEJAVOO",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "SETTING's",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ]
+    },
+    "printer": {
+      "text1": "",
+      "text2": "",
+      "text3": "",
+      "text4": "",
+      "space1": 1,
+      "space2": 1,
+      "space3": 1,
+      "space4": 1,
+      "usbPrinting": 0,
+      "bluetoothPrinting": 1,
+      "wifiPrinting": 2,
+      "tip": 3,
+      "duplicateReceipt": 4,
+      "printerSound": 5,
+      "receiptPrompt": 6,
+      "qrCodePrint": 7,
+      "barCodePrint": 8,
+      "customerReceiptUsb": 0,
+      "customerReceiptBT": 1,
+      "kitchenReceiptUsb": 0,
+      "kitchenReceiptBT": 1,
+      "wifiAddress": "192.168.0.70",
+      "bluetoothAddress": "",
+      "detail": [
+        {
+          "name": "USB-Printing",
+          "enable": true,
+          "confirmationPopup": true
+        },
+        {
+          "name": "BLUETOOTH-Printing",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "WIFI-Printing",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Tip",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Duplicate Receipt",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Printer Sound",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Receipt Prompt",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "QR-Code",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "BAR-Code",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ],
+      "customerReceiptArray": [
+        {
+          "name": "Customer Receipt USB",
+          "enable": true,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Customer Receipt Bluetooth",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ],
+      "kitchenReceiptArray": [
+        {
+          "name": "Kitchen Receipt USB",
+          "enable": true,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Kitchen Receipt Bluetooth",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ]
+    },
+    "rewards": {
+      "tenderCard": 0,
+      "posCard": 1,
+      "singleChoiceMode": true,
+      "detail": [
+        {
+          "name": "Tender Card Rewards",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "POS Rewards",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ]
+    },
+    "appLocation": {
+      "retail": 0,
+      "restaurant": 1,
+      "bar": 2,
+      "quick": 3,
+      "singleChoiceMode": true,
+      "detail": [
+        {
+          "name": "Retail",
+          "enable": true,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Restaurant",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Bar",
+          "enable": false,
+          "confirmationPopup": false
+        },
+        {
+          "name": "Quick Serve Restaurant With Kitchen Tablet",
+          "enable": false,
+          "confirmationPopup": false
+        }
+      ]
+    },
+    "otherSetting": {
+      "collapseItems": 0,
+      "consumerFacingTablet": 1,
+      "encryptionForCC": 2,
+      "resetCurrentStore": 3,
+      "loginLogoutUser": 4,
+      "assignTransactionToClerk": 5,
+      "timeClock": 6,
+      "customOptionPrint": 7,
+      "syncApplication": 8,
+      "singleChoiceMode": false,
+      "detail": [
+        {
+          "name": "Collapse Items In Product Options List",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Consumer Tablet",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Encryption For CreditCard Transaction",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Reset Current Store",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Login/Logout For User",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Assign Transaction To Clerk",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Time Clock",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Option List Printing For Customer Receipt",
+          "enable": false,
+          "confirmationPopup": true
+        },
+        {
+          "name": "Sync Application",
+          "enable": false,
+          "confirmationPopup": true
+        }
+      ]
+    }
+  }
+}

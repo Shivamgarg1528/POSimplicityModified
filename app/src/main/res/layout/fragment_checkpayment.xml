@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ccpayment_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="19"
+        android:gravity="left"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="50"
+            android:gravity="center"
+            android:text="TOTAL AMOUNT \n $"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/factor_mdpi_12_dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtotalAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="48"
+            android:gravity="center_vertical|right"
+            android:text="@string/pricetext"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/factor_mdpi_14_dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="65"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="23"
+            android:gravity="center"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/btn_cheque"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="45"
+                android:background="@drawable/payment_btn"
+                android:gravity="center"
+                android:text="Check Payment"
+                android:textColor="#5e7300"
+                android:textSize="@dimen/factor_mdpi_12_dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="99"
+            android:gravity="center"
+            android:weightSum="120" >
+
+            <Button
+                android:id="@+id/commentBtnCheckPayment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="22"
+                android:background="@drawable/btn_yellow"
+                android:text="Comment"
+                android:textColor="#484848"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/check_split"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="22"
+                android:background="@drawable/btn_blue"
+                android:text="Split"
+                android:textColor="#484848"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_customer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="22"
+                android:background="@drawable/btn_orange"
+                android:text="Customer"
+                android:textColor="#484848"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/assingClerk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="22"
+                android:background="@drawable/btn_yellow"
+                android:text="Clerk"
+                android:textColor="#484848"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_cancel_cheque"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="@dimen/factor_mdpi_06_dp"
+            android:background="@null"
+            android:src="@drawable/cancel_dialog" />
+    </LinearLayout>
+
+</LinearLayout>

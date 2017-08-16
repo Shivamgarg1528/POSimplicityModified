@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:paddingLeft="150dp"
+    android:paddingRight="150dp"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/Fragment_Noble_Gateway_ET_Noble_Gateway_AccountName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:hint="Enter Account Name"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:text="nobledemo"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/Fragment_Noble_Gateway_ET_Noble_Gateway_KEY_Name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:hint="Enter Api Key Name"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:text="test_key"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+    </LinearLayout>
+    
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/Fragment_Noble_Gateway_ET_Noble_Gateway_Key"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:hint="Enter Api Key"
+            android:text="052D0956BADCA3AA65FA11E58DF4B207D820A1F7BC8"
+            android:imeActionLabel="Save"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+    </LinearLayout>
+
+</LinearLayout>

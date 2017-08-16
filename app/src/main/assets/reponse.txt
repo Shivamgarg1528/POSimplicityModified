@@ -1,0 +1,16 @@
+<xmp>
+<response>
+<RefId>1-20150130-082943-21</RefId>
+<RegisterId>9645fdbfb0b98355</RegisterId>
+<InvNum>1-20150130-082943-21</InvNum>
+<ResultCode>0</ResultCode>
+<RespMSG>APPROVED 095113</RespMSG>
+<Message>Approved</Message>
+<AuthCode>095113</AuthCode>
+<PNRef>00000029</PNRef>
+<PaymentType>Credit</PaymentType>
+<ExtData>InvNum=1-20150130-082943-21,CardType=VISA,BatchNum=29003,Tip=0.00,CashBack=0.00,Fee=0.00,AcntLast4=0480,Name=MERCURY TEST CARD,SVC=0.00,TotalAmt=55.00,DISC=0.00,Donation=0.00,SHFee=0.00,RwdPoints=0,RwdBalance=0,RwdIssued=,EBTFSLedgerBalance=,EBTFSAvailBalance=,EBTFSBeginBalance=,EBTCashLedgerBalance=,EBTCashAvailBalance=,EBTCashBeginBalance=</ExtData>
+<EMVData></EMVData>
+<Sign></Sign>
+</response>
+</xmp>

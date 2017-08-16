@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg"
+    android:baselineAligned="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="64.8"
+            android:gravity="center"
+            android:text="Register New Customer :"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:background="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:gravity="center"
+            android:text="Registered Customer :"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@android:color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@android:color/holo_blue_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <WebView
+            android:id="@+id/Fragment_Bar_WebView_Customer_Add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="64.8" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:background="@android:color/holo_blue_dark" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+            android:layout_weight="35"
+            android:gravity="top"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/Fragment_Bar_EditText_Customer_MobileNo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/factor_mdpi_03_dp"
+                android:layout_marginRight="@dimen/factor_mdpi_03_dp"
+                android:layout_weight="15"
+                android:background="@drawable/name_editbox_bg"
+                android:gravity="center"
+                android:hint="Registered Customer Number"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:paddingLeft="@dimen/factor_mdpi_05_dp"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Fragment_Bar_TextView_Customer_Name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="center"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="@dimen/textAppearance_mdpi_11_sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <Button
+                android:id="@+id/Fragment_Bar_Btn_Save_Order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="15"
+                android:background="@drawable/shape_unselected_button"
+                android:text="Save Order"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Fragment_Bar_Order_Btn_Save_And_Print_With_USB"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="15"
+                android:background="@drawable/shape_unselected_button"
+                android:text="Save and Print Customer Receipt"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/Fragment_Bar_Order_Btn_Save_And_Print_With_Wifi"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="15"
+                android:background="@drawable/shape_unselected_button"
+                android:text="Save and Print to Kitchen"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@android:color/holo_blue_light" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:background="@android:color/white" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/Fragment_Bar_Btn_Assign"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_unselected_button"
+            android:text="Assign"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/factor_mdpi_10_dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="19"
+            android:gravity="bottom|right" >
+
+            <TextView
+                android:id="@+id/Fragment_Bar_TV_Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/factor_mdpi_03_dp"
+                android:background="@drawable/cancel_dialog"
+                android:clickable="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+</LinearLayout>

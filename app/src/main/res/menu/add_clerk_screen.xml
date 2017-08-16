@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.posimplicity.AddClerkScreen" >
+
+    <item
+        android:id="@+id/AddNewItem"
+        android:icon="@android:drawable/ic_input_add"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="Add"/>
+    <item
+        android:id="@+id/RemoveItem"
+        android:icon="@android:drawable/ic_input_delete"
+        android:orderInCategory="200"
+        android:showAsAction="ifRoom|withText"
+        android:title="  Remove"/>
+
+</menu>

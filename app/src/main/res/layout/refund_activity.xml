@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000" >
+        </View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Get Order Details From Store"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_11_sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_cancelRefund"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/factor_mdpi_02_dp"
+            android:background="@null"
+            android:src="@drawable/cancel_dialog" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="70" >
+
+            <EditText
+                android:id="@+id/transIdForRefund"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:gravity="center"
+                android:hint="Enter Transaction Id "
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="#a9a9a9"
+                android:textSize="@dimen/factor_mdpi_10_dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/refund"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:background="@drawable/ic_green_bg"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20" >
+    </RelativeLayout>
+
+</LinearLayout>

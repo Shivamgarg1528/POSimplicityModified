@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="right"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <TextView
+            android:id="@+id/Dialog_Clerk_TextView_Name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:textColor="#434343"
+            android:textSize="@dimen/textAppearance_mdpi_11_sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="72"
+            android:gravity="center" >
+
+            <ListView
+                android:id="@+id/Dialog_Clerk_ListView_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#ffffff"
+                android:dividerHeight="@dimen/factor_mdpi_02_dp" >
+            </ListView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/Dialog_Clerk_BTN_Submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="35"
+                android:background="@drawable/btn_dejavo_second"
+                android:text="Submit"
+                android:width="0dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8"
+        android:gravity="bottom|right"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/Dialog_Clerk_ImgBtn_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_05_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_05_dp"
+            android:background="@null"
+            android:clickable="true"
+            android:src="@drawable/cancel_dialog" />
+    </LinearLayout>
+
+</LinearLayout>

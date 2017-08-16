@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:src="@drawable/ic_account_circle_black_24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:text="@string/string_login_as"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_11_sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/fragment_operator_spinner_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
+
+    <EditText
+        android:id="@+id/fragment_operator_edt_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:hint="@string/string_enter_name"
+        android:imeOptions="actionNext"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+    <EditText
+        android:id="@+id/fragment_operator_edt_pwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:hint="@string/string_enter_password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom|end">
+
+        <TextView
+            android:id="@+id/fragment_operator_txt_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_05_dp"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/factor_mdpi_07_dp"
+            android:text="@string/string_login"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.posimplicity"
+    android:versionCode="9"
+    android:versionName="9.0.1">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.utils.POSApp"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".OperatorActivity"
+            android:label="Operator Screen"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MaintenanceActivity"
+            android:label="Settings Screen"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".HomeActivity"
+            android:configChanges="keyboard"
+            android:label="Home Screen"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".TenderActivity"
+            android:label="Tender Screen"
+            android:screenOrientation="landscape"
+            android:theme="@style/PopupTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/select_device"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".ShiftReportActivity"
+            android:label="Shift Report"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".SetupActivity"
+            android:label="@string/title_activity_setup"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DailyReportAsChild"
+            android:label="Daily Report"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ChartViewActivity"
+            android:label="@string/title_activity_char_view"
+            android:parentActivityName=".DailyReportAsChild"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.DailyReportAsChild" />
+        </activity>
+        <activity
+            android:name=".FunctionDrawerActivity"
+            android:label="@string/title_activity_functions"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".AddClerkPaygradeActivity"
+            android:label="@string/title_activity_add_clerk_screen"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name=".AddClerkSalesActivity"
+            android:label="@string/title_activity_add_clerk_screen_sales"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name=".SyncActivity"
+            android:label="@string/title_activity_sync"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CommentActivity"
+            android:label="@string/title_activity_comment"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name=".TipReportActivity"
+            android:label="@string/title_activity_tip_report_as_child"
+            android:parentActivityName=".HomeActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".AddDescriptionActivity"
+            android:label="@string/title_activity_add_descption"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name=".PendingActivity"
+            android:label="@string/title_activity_pending"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+        <activity
+            android:name=".ReprintActivity"
+            android:label="@string/title_activity_reprint"
+            android:parentActivityName=".MaintenanceActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.posimplicity.MaintenanceActivity" />
+        </activity>
+
+        <service android:name="com.PosBroadcast.SocketConnectionService" />
+        <service android:name=".service.BTService" />
+        <service android:name=".service.WFService" />
+        <service android:name=".service.BTDejavooService" />
+        <service android:name="com.PosBroadcast.AutologoutService" />
+
+        <activity
+            android:name=".SyncOptionActivity"
+            android:label="@string/title_activity_sync_option" />
+
+        <receiver
+            android:name=".service.MyBluetoothReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="51b905127fed8a1a6812a0df86f054be4cb938dd" />
+
+        <activity
+            android:name=".activity.StartingActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".activity.PaymentActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".activity.FunctionActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ReportActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.ChartActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activity.PendingAndReprintActivity"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name="com.service.BackgroundService"
+            android:exported="false" />
+
+        <!-- Services -->
+        <service
+            android:name=".service.printing.WifiService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_toolbar" />
+
+        <!-- Home Activity Views-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".317"
+                android:orientation="vertical"
+                android:padding="@dimen/factor_mdpi_02_dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/activity_home_tender_bg">
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_tender_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/factor_mdpi_05_dp"
+                        android:text="0.00"
+                        android:textColor="#008000"
+                        android:textSize="@dimen/textAppearance_mdpi_12_sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_tender_pay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/factor_mdpi_05_dp"
+                        android:background="@drawable/subtotal_button_bg"
+                        android:gravity="center"
+                        android:text="@string/string_tender"
+                        android:textColor="#8fa30b"
+                        android:textSize="@dimen/textAppearance_mdpi_09_sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="@dimen/factor_mdpi_03_dp"
+                    android:layout_marginTop="@dimen/factor_mdpi_01_dp">
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_transaction_id"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/factor_mdpi_02_dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:hint="Trans ID"
+                        android:padding="@dimen/factor_mdpi_02_dp"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/textAppearance_mdpi_07_sp" />
+
+                    <TextView
+                        android:id="@+id/activity_home_tv_transaction_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/factor_mdpi_02_dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimaryDark"
+                        android:gravity="center"
+                        android:hint="Trans Date"
+                        android:padding="@dimen/factor_mdpi_02_dp"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/textAppearance_mdpi_07_sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/factor_mdpi_01_dp"
+                    android:background="#B8B8B8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_home_recycler_view_checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/factor_mdpi_01_dp"
+                    android:background="#B8B8B8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ECEBE5"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/factor_mdpi_03_dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SubTotal"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tax"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/activity_home_tv_subtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:id="@+id/activity_home_tv_tax"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:id="@+id/activity_home_tv_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+                        <TextView
+                            android:id="@+id/activity_home_tv_total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#484848"
+                            android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".683"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/activity_home_edt_barcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_box"
+                        android:gravity="center"
+                        android:hint="Search Barcode"
+                        android:maxWidth="40dp"
+                        android:paddingEnd="@dimen/factor_mdpi_05_dp"
+                        android:paddingStart="@dimen/factor_mdpi_05_dp"
+                        android:singleLine="true" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/activity_home_auto_complete_tv_product_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/search_box"
+                        android:completionThreshold="1"
+                        android:gravity="center"
+                        android:hint="Search Product"
+                        android:maxWidth="40dp"
+                        android:paddingEnd="@dimen/factor_mdpi_05_dp"
+                        android:paddingStart="@dimen/factor_mdpi_05_dp"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_home_recycler_view_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/factor_mdpi_01_dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_home_recycler_view_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:padding="@dimen/factor_mdpi_01_dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/activity_home_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:scrollbars="none"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@drawable/selector_navigation_item"
+        app:itemTextColor="@drawable/selector_navigation_item"
+        app:menu="@menu/activity_home_menu"
+        app:theme="@style/NavigationDrawerStyle" />
+
+</android.support.v4.widget.DrawerLayout>

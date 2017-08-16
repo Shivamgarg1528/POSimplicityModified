@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true">
+
+        <item
+            android:id="@+id/activity_setting_drawer_item_printer"
+            android:icon="@drawable/ic_print"
+            android:title="@string/string_printer" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_cc_admin"
+            android:icon="@drawable/ic_cc_admin"
+            android:title="@string/string_cc_admin" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_support"
+            android:icon="@drawable/ic_support"
+            android:title="@string/string_support" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_rewards"
+            android:icon="@drawable/ic_rewards"
+            android:title="@string/string_rewards" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_security"
+            android:icon="@drawable/ic_security"
+            android:title="@string/string_security" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_others"
+            android:icon="@drawable/ic_other"
+            android:title="@string/string_other_settings" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_portal"
+            android:icon="@drawable/ic_online"
+            android:title="@string/string_online_management_portal" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_app_location"
+            android:icon="@drawable/ic_location"
+            android:title="@string/string_app_location" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/string_about" />
+        <item
+            android:id="@+id/activity_setting_drawer_item_exit"
+            android:icon="@drawable/ic_left_nav_logout"
+            android:title="@string/string_exit" />
+    </group>
+</menu>

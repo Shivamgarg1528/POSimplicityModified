@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="Enter Order’s Transaction ID to Manually Enter Order into Your Online Management Portal"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <EditText
+            android:id="@+id/Fragment_Offline_Tender_Edt_transcId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@drawable/name_editbox_bg"
+            android:gravity="center"
+            android:hint="Enter Transaction ID"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:text="Select Any Payment Mode :-"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/factor_mdpi_10_dp"
+        android:layout_weight="49"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <ListView
+            android:id="@+id/Fragment_Offline_Tender_ListView_mode"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:choiceMode="singleChoice" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="10" >
+
+        <Button
+            android:id="@+id/Fragment_Offline_Tender_Btn_Submit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:background="@drawable/shape_unselected_button"
+            android:gravity="center"
+            android:text="Submit"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="bottom|right" >
+
+        <TextView
+            android:id="@+id/Fragment_Offline_Tender_Btn_Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_03_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_03_dp"
+            android:background="@drawable/cancel_dialog" />
+    </LinearLayout>
+
+</LinearLayout>

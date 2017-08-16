@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="97"
+        android:weightSum="97"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/mEditTextPaymentModeName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="55"
+            android:editable="false"
+            android:ems="20"
+            android:maxLines="1"
+            android:text="Cash"
+            android:textColor="@android:color/white"
+            android:textSize="25sp" >
+
+            <requestFocus />
+        </EditText>
+        
+        <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <Spinner
+            android:id="@+id/mSpinnerSortOrder"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:entries="@array/sortOrder" />
+        
+         <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center" >
+
+            <CheckedTextView
+                android:id="@+id/mCheckedTextViewEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/textCheckMark"
+                android:checked="true"
+                android:padding="5dp" />
+        </LinearLayout>
+
+         <View android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+         
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center" >
+
+            <CheckedTextView
+                android:id="@+id/mCheckedTextViewEditable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkMark="?android:attr/textCheckMark"
+                android:checked="true"
+                android:padding="5dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"        
+        android:background="@android:color/white" />
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg"
+    android:padding="@dimen/factor_mdpi_02_dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/factor_mdpi_25_dp"
+        android:background="@drawable/tab_btn_items_off"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/factor_mdpi_02_dp"
+        android:paddingStart="@dimen/factor_mdpi_02_dp"
+        android:text="@string/string_product_options_title"
+        android:textColor="@color/popupTextColor1"
+        android:textSize="@dimen/textAppearance_mdpi_09_sp"
+        android:textStyle="bold|italic" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_product_option_or_price_layout_rv_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/dialog_product_option_or_price_layout_rv_empty_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/string_no_product_options_available_n_for_selected_product"
+            android:textColor="@color/popupTextColor1"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_product_option_or_price_layout_ll_price_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".9"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/factor_mdpi_03_dp"
+                android:paddingEnd="@dimen/factor_mdpi_03_dp"
+                android:text="@string/string_product_price_title"
+                android:textColor="@color/popupTextColor"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dialog_product_option_or_price_layout_tv_price"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/factor_mdpi_03_dp"
+                android:background="@drawable/qty_bg"
+                android:gravity="center"
+                android:maxLines="3"
+                android:padding="@dimen/factor_mdpi_03_dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textAppearance_mdpi_16_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3">
+
+            <include layout="@layout/keypad_layout" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_product_option_or_price_layout_tv_add_or_modify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_green_bg"
+        android:gravity="center"
+        android:text="@string/string_add_item"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textAppearance_mdpi_12_sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

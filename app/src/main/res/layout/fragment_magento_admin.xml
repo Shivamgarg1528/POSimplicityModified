@@ -1,0 +1,29 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <WebView
+        android:id="@+id/Fragment_Mangento_WebView_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/Fragment_Mangento_ProgressBar_Loading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/Fragment_Mangento_ImageBtn_Cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:visibility="invisible"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/factor_mdpi_05_dp"
+        android:src="@drawable/cancel_dialog" />
+
+</FrameLayout>

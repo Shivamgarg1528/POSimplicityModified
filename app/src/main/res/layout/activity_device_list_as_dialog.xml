@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/Activity_Device_List_TV_Paired_Devices_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666"
+        android:paddingLeft="@dimen/factor_mdpi_10_dp"
+        android:text="Paired Devices"
+        android:textColor="#fff"
+        android:textSize="@dimen/textAppearance_mdpi_10_sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/Activity_Device_List_LV_Paired_Devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:stackFromBottom="true" />
+
+    <TextView
+        android:id="@+id/Activity_Device_List_TV_Available_Devices_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#666"
+        android:paddingLeft="@dimen/factor_mdpi_10_dp"
+        android:text="Available Devices"
+        android:textColor="#fff"
+        android:textSize="@dimen/textAppearance_mdpi_10_sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/Activity_Device_List_LV_Available_Devices"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_weight="2"
+        android:stackFromBottom="true" />
+
+    <Button
+        android:id="@+id/Activity_Device_List_Btn_Scan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:textSize="@dimen/textAppearance_mdpi_15_sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

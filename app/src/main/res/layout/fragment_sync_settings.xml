@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="75"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:drawableLeft="@drawable/icon_3"
+            android:drawablePadding="@dimen/factor_mdpi_05_dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="SYNC"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/factor_mdpi_14_dp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/Fragment_Sync_Settings_ListView_Items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.6"
+            android:choiceMode="multipleChoice"
+            android:gravity="center" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".4"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/Fragment_Sync_Settings_BT_Full_App"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:paddingLeft="@dimen/factor_mdpi_30_dp"
+                android:paddingRight="@dimen/factor_mdpi_30_dp"
+                android:text="Sync Full App"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/Fragment_Sync_Settings_BT_SelectedItems"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:visibility="gone"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:paddingLeft="@dimen/factor_mdpi_30_dp"
+                android:paddingRight="@dimen/factor_mdpi_30_dp"
+                android:text="Sync Selected Items"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

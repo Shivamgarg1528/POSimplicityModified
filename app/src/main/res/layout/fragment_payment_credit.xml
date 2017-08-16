@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/factor_mdpi_10_dp"
+    android:paddingEnd="@dimen/factor_mdpi_25_dp"
+    android:paddingStart="@dimen/factor_mdpi_25_dp">
+
+    <com.devmarvel.creditcardentry.library.CreditCardForm
+        android:id="@+id/fragment_payment_credit_cc_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/factor_mdpi_10_dp"
+        app:default_text_colors="true"
+        app:include_zip="false" />
+
+    <TextView
+        android:id="@+id/fragment_payment_credit_tv_swipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/factor_mdpi_10_dp"
+        android:background="@drawable/ic_drawable_cc_button_bg"
+        android:gravity="center"
+        android:padding="@dimen/factor_mdpi_02_dp"
+        android:text="@string/string_swipe"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fragment_payment_credit_tv_pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+        android:background="@drawable/ic_drawable_cc_button_bg"
+        android:gravity="center"
+        android:padding="@dimen/factor_mdpi_02_dp"
+        android:text="@string/string_pay"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+{
+    "details": [
+        {
+            "staffId": "1",
+            "staffName": "Employee A",
+            "staffPayGrade": "5"
+        },
+        {
+            "staffId": "2",
+            "staffName": "Employee B",
+            "staffPayGrade": "10"
+        },
+        {
+            "staffId": "3",
+            "staffName": "Employee C",
+            "staffPayGrade": "15"
+        },
+        {
+            "staffId": "4",
+            "staffName": "Employee D",
+            "staffPayGrade": "20"
+        },
+        {
+            "staffId": "5",
+            "staffName": "Employee E",
+            "staffPayGrade": "25"
+        },
+        {
+            "staffId": "6",
+            "staffName": "Employee F",
+            "staffPayGrade": "30"
+        },
+        {
+            "staffId": "7",
+            "staffName": "Employee G",
+            "staffPayGrade": "35"
+        },
+        {
+            "staffId": "8",
+            "staffName": "Employee H",
+            "staffPayGrade": "40"
+        },
+        {
+            "staffId": "9",
+            "staffName": "Employee I",
+            "staffPayGrade": "45"
+        },
+        {
+            "staffId": "10",
+            "staffName": "Employee J",
+            "staffPayGrade": "50"
+        }
+    ]
+}

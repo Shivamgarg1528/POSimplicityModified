@@ -1,0 +1,333 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:paddingBottom="05dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="05dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/icon_5"
+        android:drawablePadding="@dimen/factor_mdpi_07_dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/printer_settings"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/factor_mdpi_15_dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:gravity="center_vertical"
+            android:text="@string/string_text_to_display"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:gravity="center"
+            android:text="@string/leftmargin"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <EditText
+            android:id="@+id/Fragment_Printer_Settings_EDT_FRIST"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/string_header_text"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Fragment_Printer_Settings_SP_FRIST"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <EditText
+            android:id="@+id/Fragment_Printer_Settings_EDT_SECOND"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/string_header_text"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Fragment_Printer_Settings_SP_SECOND"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <EditText
+            android:id="@+id/Fragment_Printer_Settings_EDT_THIRD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/string_header_text"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Fragment_Printer_Settings_SP_THIRD"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:orientation="horizontal"
+        android:weightSum="3" >
+
+        <EditText
+            android:id="@+id/Fragment_Printer_Settings_EDT_FOUR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.3"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="@string/string_header_text"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Fragment_Printer_Settings_SP_FOUR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text="Setting List :"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/factor_mdpi_10_dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="04dp"
+        android:layout_marginTop="04dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <ListView
+            android:id="@+id/Fragment_Printer_Settings_ListView_Settings_Items"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:layout_weight="70"
+            android:choiceMode="multipleChoice"
+            android:divider="@android:color/white"
+            android:dividerHeight="1dp" >
+        </ListView>
+
+        <View android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/Fragment_Printer_Settings_RG_Customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/Fragment_Printer_Settings_RB_Customer_USB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:text="Customer Receipt USB"
+                    android:checked="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/Fragment_Printer_Settings_RB_Customer_BT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:text="Customer Receipt BT"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white" />
+
+            <RadioGroup
+                android:id="@+id/Fragment_Printer_Settings_RG_Kitchen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/Fragment_Printer_Settings_RB_Kitchen_USB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:text="Kitchen Receipt USB"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/Fragment_Printer_Settings_RB_Kitchen_BT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:text="Kitchen Receipt BT"
+                    android:checked="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_25_dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <Button
+            android:id="@+id/Fragment_Printer_Settings_Button_Drawer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_unselected_button"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Drawer Settings"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".09" />
+
+        <Button
+            android:id="@+id/Fragment_Printer_Settings_BUTTON_TEST_PRINT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_unselected_button"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/string_test_print"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".09" />
+
+        <Button
+            android:id="@+id/Fragment_Printer_Settings_BUTTON_RESET"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_unselected_button"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Reset"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".09" />
+
+        <Button
+            android:id="@+id/Fragment_Printer_Settings_BUTTON_SAVE"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shape_unselected_button"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/save"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

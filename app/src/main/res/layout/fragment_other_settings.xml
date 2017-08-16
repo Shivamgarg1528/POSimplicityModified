@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="85"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="12"
+            android:drawableLeft="@drawable/icon_6"
+            android:drawablePadding="@dimen/textAppearance_mdpi_06_sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Other Settings"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="36" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_SWITCH_Collapse_Items"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable To Collapse Items In Item Options List"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_SWITCH_Enable_Tablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Consumer Facing Tablet"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_SWITCH_Encrypted_Gateway"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Encryption For CC Transaction"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_ResetStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable To Reset Current Store"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_QrCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable QrCode Printing"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_BarCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable BarCode Printing"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_ClerkReporting"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Login/Logout For Users"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_ClerkOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Clerk To Assing Transaction"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_ClerkTimeOnOff"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Time Clock"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/Fragment_Other_Settings_Supress_Custom_Printing"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="10"
+                    android:gravity="center_vertical"
+                    android:text="Enable Custom Option Printing on Customer Receipt"
+                    android:textColor="@android:color/white"
+                    android:textOff="@string/switch_off_text"
+                    android:textOn="@string/switch_on_text"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="bottom|left"
+            android:text="Selected App Location :-"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/Fragment_Other_Settings_ListView_Store_Mode"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:choiceMode="singleChoice" >
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/Fragment_Other_Settings_BUTTON_RESET"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="20"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Reset"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+            <Button
+                android:id="@+id/Fragment_Other_Settings_BUTTON_SAVE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="20"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Save"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+            
+            <Button
+                android:id="@+id/Fragment_Other_Settings_BUTTON_AutoStart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="30"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Auto Start(03:00)"
+                android:textSize="@dimen/textAppearance_mdpi_11_sp" />
+            
+            <Button
+                android:id="@+id/Fragment_Other_Settings_BUTTON_Reset_AutoStart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="25"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Reset AutoStart"
+                android:textSize="@dimen/textAppearance_mdpi_11_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

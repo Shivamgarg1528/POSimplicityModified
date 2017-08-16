@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sortOrder">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string name="app_name">POSimplicity</string>
+    <string name="merchant">admin</string>
+    <string name="merchantPassword">password1</string>
+    <string name="transId">Trans Id</string>
+    <string name="transTime">Date &amp; Time</string>
+    <string name="search_product">Search Product</string>
+    <string name="addQtytext">Item Quantity</string>
+    <string name="productNametext">Fresh Banana Shake </string>
+    <string name="itemQtytext">1</string>
+    <string name="subtotaltext">Item Sub-total</string>
+    <string name="pricetext"> 0.0</string>
+    <string name="totalamtMsg">Total \nAmount</string>
+    <string name="tipamtMsg">Tip \nAmount</string>
+    <string name="expiration">Expiration</string>
+    <string name="name_as_on_the_card">Name as on the card</string>
+    <string name="save">Save</string>
+    <string name="leftmargin">Left Margin</string>
+    <string name="string_header_text">Header Text</string>
+
+    <string name="enterbarcode">Enter Barcode</string>
+    <string name="switch_on_text">Enable</string>
+    <string name="switch_off_text">Disable</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Printer Setting</item>
+        <item>CreditCard Setting</item>
+        <item>Support</item>
+        <item>Sync Data</item>
+        <item>Rewards Management</item>
+        <item>Security</item>
+        <item>Other Setting</item>
+        <item>Tender</item>
+        <item>Online Management Portal</item>
+        <item>About</item>
+        <item>Exit</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/icon_5</item>
+        <item>@drawable/icon_6</item>
+        <item>@drawable/icon_1</item>
+        <item>@drawable/icon_3</item>
+        <item>@drawable/icon_4</item>
+        <item>@drawable/icon_7</item>
+        <item>@drawable/icon_8</item>
+        <item>@drawable/icon_8</item>
+        <item>@drawable/icon_2</item>
+        <item>@drawable/icon_9</item>
+        <item>@drawable/icon_10</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- All font famliy Name with String Tag -->
+
+    <string name="HelveticaLTStd_Bold">HelveticaLTStd-Bold</string>
+    <string name="plugnpay_id">Enter PlugNPay ID</string>
+    <string name="credit_card_settings">Credit Card Settings</string>
+    <string name="admin_settings">Security</string>
+    <string name="select_device">Select a device to connect</string>
+    <string name="printer_settings">Printer Settings</string>
+
+    <string-array name="payment_mode">
+        <item>None</item>
+        <item>Cash</item>
+        <item>Credit</item>
+        <item>Check</item>
+    </string-array>
+
+    <string name="title_activity_sync">SyncActivity</string>
+    <string name="String_Company_CopyRights">\u00A9 Copyright 2013 - 2015 Key Register LLC.</string>
+    <string name="String_No_Interent_Available">Please Connect With Working Internet</string>
+    <string name="String_Retry">Retry</string>
+    <string name="String_Cancel">Cancel</string>
+    <string name="title_activity_setup">SetupActivity</string>
+    <string name="title_activity_char_view">CharView For Daily Sales</string>
+    <string name="title_activity_functions">FunctionsActivity</string>
+    <string name="title_activity_add_clerk_screen">PayGrade Screen</string>
+    <string name="title_activity_add_clerk_screen_sales">Sales Clerk Screen</string>
+    <string name="title_activity_comment">Comment Screen</string>
+    <string name="title_activity_tip_report_as_child">TipReportScreen</string>
+    <string name="title_activity_add_descption">AddPayoutDescption</string>
+    <string name="title_activity_pending">Pending Order Screen</string>
+    <string name="title_activity_reprint">ReprintScreen</string>
+    <string name="scanning">Scanning for devices...</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_activity_sync_option">SyncOptionActivity</string>
+
+    <!-- New Strings-->
+
+    <!--StartActivity -->
+    <string name="string_u00a9_copyright_2013_2017_key_register_llc">© Copyright 2013 – 2017 Key Register LLC.</string>
+    <string name="string_if_the_keyboard_does_not_appear_go_to_settings_apps_language_input_and_tap_on_the_word_default_and_turn_off_the_physical_keyboard"><![CDATA[If The Keyboard Does Not Appear Go To Settings / Apps / Language & Input and Tap on The Word Default and Turn Off the Physical Keyboard]]></string>
+    <string name="string_to_view_demo_installation_please_enter_demo_in_above_field">To View Demo Installation, Please Enter \'Demo\' in above field</string>
+    <string name="string_click_here_to_register_a_new_account">Click Here To Register A New Account</string>
+    <string name="string_posimplicity_login_id">POSimplicity LOGIN ID</string>
+    <string name="string_enter_account_name_provided_by_you_after_successfully_registered">Enter Account Name Provided By You After Successfully Registered !!!</string>
+    <string name="string_login">Login</string>
+    <string name="string_hint_enter_store_name">Enter Store Name</string>
+    <string name="string_enter_name">Enter Name</string>
+    <string name="string_enter_password">Enter Password</string>
+    <string name="string_login_as">Login As</string>
+    <string name="string_please_check_internet_connection">Please Check Your Internet Connection</string>
+    <string name="string_please_provide_all_info">Please Provide All Information</string>
+    <string name="string_login_success">Login Success</string>
+    <string name="string_contact_app_admin_for_better_support">Contact Admin For Better Support</string>
+
+    <string name="string_account_may_be_suspended">Please Try Again. If You Are Unable to Log In Your Account May Be Suspended. Please call 800–239–8794 Ext 1 for Sales</string>
+    <string name="string_ok">OK</string>
+    <string name="string_logout">Logout</string>
+    <string name="string_reports">Reports</string>
+    <string name="string_function">Function</string>
+    <string name="string_settings">Settings</string>
+    <string name="string_other">Other</string>
+    <string name="string_reprint">Reprint</string>
+    <string name="string_return">Return</string>
+    <string name="string_pending">Pending</string>
+    <string name="string_order">Order</string>
+    <string name="string_tender">TENDER</string>
+    <string name="string_product_options_title">Product Options</string>
+    <string name="string_add_item">Add Item</string>
+    <string name="string_product_price_title">Product Price</string>
+    <string name="string_no_product_options_available_n_for_selected_product">No Product Options Available\nFor Selected Product</string>
+    <string name="string_apply_dollar_discount">Apply $ Discount</string>
+    <string name="string_apply_percentage_discount">Apply % Discount</string>
+    <string name="string_pay_by_check">Pay By Check</string>
+    <string name="string_assign_transaction">Assign Transaction</string>
+    <string name="string_please_add_item_first">Cart Is Empty</string>
+
+    <!-- Discount Text,Toast,Message-->
+    <!--Start-->
+    <string name="string_discount">Discount</string>
+    <string name="string_discount_apply">Apply</string>
+    <string name="string_discount_clear">Clear</string>
+    <string name="string_value_must_be_less_than_product_price">Value Must Be Less Than Product Amount</string>
+    <string name="string_value_must_be_less_than_bill_price">Value Must Be Less Than Bill Amount</string>
+    <string name="string_value_must_be_greater_than_0_and_less_than_equals_to_100">Value Must Be Greater Than 0 And Less Than Equals To 100</string>
+    <string name="string_you_can_not_apply_discount_now">You Can\'t Apply Discount Now</string>
+    <string name="string_you_can_not_clear_discount_now">You Can\'t Clear Discount Now</string>
+    <string name="string_value_must_be_greater_than_0">Value Must Be Greater Than 0</string>
+    <string name="string_discount_cleared_successfully">Discount Cleared Successfully</string>
+    <string name="string_discount_applied_successfully">Discount Applied Successfully</string>
+    <string name="string_discount_not_applied_yet">Discount Not Applied Yet</string>
+    <string name="string_apply_discount">Apply Discount</string>
+    <string name="string_clear_discount">Clear Discount</string>
+    <!--End-->
+
+    <!--Function Activity Navigation Items -->
+    <string name="string_add_customer">Add Customer</string>
+    <string name="string_add_table">Add Table</string>
+    <string name="string_add_clerk">Add Clerk</string>
+    <string name="string_time_clock">Time Clock</string>
+    <string name="string_drawer">Drawer</string>
+    <string name="string_payouts">Payouts</string>
+    <string name="string_dejavoo">DEJAVOO</string>
+    <string name="string_tsys">TSYS</string>
+    <string name="string_tip_adjustment">Tip Adjustment</string>
+    <string name="string_return_adjustment">Return Adjustment</string>
+    <string name="string_exit">Exit</string>
+    <string name="string_payout_amount">Enter Payout Amount</string>
+    <string name="string_payout_description">Enter Payout Description</string>
+    <string name="string_save">Save</string>
+    <string name="string_select_predefined_payout_desc">Select Pre-defined Payout Description :-</string>
+    <string name="string_please_enter_pay_amount_first">Please Enter PayAmount First</string>
+    <string name="string_failed_to_record_data">Failed To Record Data</string>
+    <string name="string_record_data_successfully">Record Data SuccessFully</string>
+    <string name="string_payout_saved">Payout Saved</string>
+
+    <!--Reports-->
+    <string name="string_print">Print</string>
+    <string name="string_clear">Clear</string>
+    <string name="string_chart">Chart</string>
+    <string name="string_daily_report">Daily Report</string>
+    <string name="string_shift_report">Shift Report</string>
+    <string name="string_no">No</string>
+    <string name="string_yes">Yes</string>
+    <string name="string_are_you_sure_you_want_to_clear">Are You Sure You Want To Clear %s</string>
+    <string name="string_report_cleared">%s Cleared Successfully</string>
+    <string name="string_no_details_available_for">No Details Available For %s</string>
+
+    <!-- Reprint and Pending Orders Activity-->
+    <string name="string_select_any_option">Select Any Option…</string>
+    <string name="string_no_order_available">No Orders Available</string>
+    <string name="string_please_select_any_order_from_list">Please Select Any Order From List</string>
+
+    <!-- Home Activity-->
+
+    <string name="string_gift">Gift</string>
+    <string name="string_rewards">Rewards</string>
+    <string name="string_clear_cart">Clear Cart</string>
+    <string name="string_press_again_to_exit">Press Again To Exit POSimplicity</string>
+    <string name="string_are_you_sure_you_want_to_clear_cart">Are You Sure You Want To Clear Cart ?</string>
+
+    <!--Setting Screen-->
+    <string name="string_online_management_portal">Online Management Portal</string>
+    <string name="string_support">Support</string>
+    <string name="string_user_guide">User Guide</string>
+    <string name="string_knowledge_base">Knowledge Base</string>
+    <string name="string_get_cc_process">Get CC Process</string>
+    <string name="string_other_settings">Other</string>
+    <string name="string_app_location">App Location</string>
+    <string name="string_printer">Printer</string>
+    <string name="string_cc_admin">CC Admin</string>
+    <string name="string_security">Security</string>
+    <string name="string_about">About</string>
+    <string name="string_all_right_reserved">All Right Reserved</string>
+    <string name="string_text_to_display">Enter Text to Display On Receipt :-</string>
+    <string name="string_continue">Continue</string>
+    <string name="string_cancel">Cancel</string>
+    <string name="string_enter_ip_address">Enter IP Address Default IP is 192.168.0.70</string>
+    <string name="string_saved_ip_is_message">Saved IP is (%s), Enter new IP address in below field</string>
+    <string name="string_bluetooth_not_supported_by_device">Bluetooth Not Supported By Device</string>
+    <string name="string_test_print">Test Print</string>
+    <string name="string_drawer_setting">Drawer Setting</string>
+    <string name="string_enable_drawer_for_different_payment_mode">Enable Drawer For Different Payment Mode</string>
+    <string name="string_customer_receipt_option">Customer Receipt Option :-</string>
+    <string name="string_printer_settings">Settings :-</string>
+    <string name="string_kitchen_receipt_option">Kitchen Receipt Option :-</string>
+
+    <!-- Propay Gateway Strings -->
+    <string name="string_delete_payer">Delete Payer</string>
+    <string name="string_create_payer">Create Payer</string>
+    <string name="string_propay_payer_id_create_successfully">PropayPayerId Successfully Created</string>
+    <string name="string_propay_payer_id_delete_successfully">PropayPayerId Successfully Deleted</string>
+    <string name="string_propay_payer_id_failed_to_create">Failed To Create PropayPayerId</string>
+    <string name="string_propay_payer_id_failed_to_delete">Failed To Delete PropayPayerId</string>
+    <string name="string_propay_payer_id_label">Propay PayerId -</string>
+    <string name="string_propay_payer_id_not_available">Not Available</string>
+
+    <!-- Bridge Pay-->
+    <string name="string_hint_bridge_pay_user_name">Username</string>
+    <string name="string_hint_bridge_pay_user_password">Password</string>
+
+    <!-- CreditCard Fragment-->
+    <string name="string_pay">PAY</string>
+    <string name="string_swipe">SWIPE</string>
+
+</resources>

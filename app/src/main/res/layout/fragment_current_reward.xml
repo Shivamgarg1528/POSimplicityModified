@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="90"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_4"
+                android:drawablePadding="@dimen/textAppearance_mdpi_06_sp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Rewards Settings"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_13_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="Please Call POSImplicity at 800-239-8794 if you want to add Rewards functionality"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/Fragment_Rewards_ListView_Items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="64" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/Fragment_Rewards_Button_Reset"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="20"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Reset"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+            <Button
+                android:id="@+id/Fragment_Rewards_Button_Save"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_02_dp"
+                android:layout_weight="20"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Save"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72726e"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="85"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="12"
+            android:drawableLeft="@drawable/icon_7"
+            android:drawablePadding="@dimen/textAppearance_mdpi_06_sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/admin_settings"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="86" >
+
+            <LinearLayout
+                android:id="@+id/Activity_Security_Frame_Authority"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                android:weightSum="86" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="74"
+                    android:orientation="vertical"
+                    android:weightSum="100" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:text="Settings Name :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center|right"
+                            android:text="Clerk :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center|right"
+                            android:text="Manager :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center|right"
+                            android:text="Supervisor :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5"
+                        android:background="@android:color/white" />
+
+                    <ListView
+                        android:id="@+id/Activity_Security_Settings_ListView_Items"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="41" >
+                    </ListView>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5"
+                        android:background="@android:color/white" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:gravity="center_vertical"
+                            android:text="Role Name :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50"
+                            android:gravity="center"
+                            android:text="Role Password :"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight=".5"
+                        android:background="@android:color/white" />
+
+                    <ListView
+                        android:id="@+id/Activity_Security_Settings_ListView_Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="34" >
+                    </ListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="12"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <Button
+                        android:id="@+id/Activity_Security_Settings_BUTTON_RESET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/factor_mdpi_02_dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/shape_unselected_button"
+                        android:gravity="center"
+                        android:text="Reset"
+                        android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+                    <Button
+                        android:id="@+id/Activity_Security_Settings_BUTTON_SAVE"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/factor_mdpi_02_dp"
+                        android:layout_weight="20"
+                        android:background="@drawable/shape_unselected_button"
+                        android:gravity="center"
+                        android:text="Save"
+                        android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Activity_Security_TextView_No_Authority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="You Are Not An Authorized User  \n To Use This Panel"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_20_sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

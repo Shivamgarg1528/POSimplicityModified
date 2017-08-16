@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- @ Author Shivam Garg -->
+
+<resources>
+
+    <!-- All Dimensions Values From 50 to 1 in DP -->
+    <!-- This file will be used for the Margin,padding,width, height, -->
+
+    <dimen name="factor_mdpi_40_dp">80dp</dimen>
+    <dimen name="factor_mdpi_35_dp">70dp</dimen>
+    <dimen name="factor_mdpi_30_dp">60dp</dimen>
+    <dimen name="factor_mdpi_28_dp">56dp</dimen>
+    <dimen name="factor_mdpi_25_dp">50dp</dimen>
+    <dimen name="factor_mdpi_22_dp">44dp</dimen>
+    <dimen name="factor_mdpi_21_dp">42dp</dimen>
+    <dimen name="factor_mdpi_20_dp">40dp</dimen>
+    <dimen name="factor_mdpi_17_dp">34dp</dimen>
+    <dimen name="factor_mdpi_16_dp">32dp</dimen>
+    <dimen name="factor_mdpi_15_dp">30dp</dimen>
+    <dimen name="factor_mdpi_14_dp">28dp</dimen>
+    <dimen name="factor_mdpi_13_dp">26dp</dimen>
+    <dimen name="factor_mdpi_12_dp">24dp</dimen>
+    <dimen name="factor_mdpi_11_dp">22dp</dimen>
+    <dimen name="factor_mdpi_10_dp">20dp</dimen>
+    <dimen name="factor_mdpi_08_dp">16dp</dimen>
+    <dimen name="factor_mdpi_07_dp">14dp</dimen>
+    <dimen name="factor_mdpi_06_dp">12dp</dimen>
+    <dimen name="factor_mdpi_05_dp">10dp</dimen>
+    <dimen name="factor_mdpi_04_dp">8dp</dimen>
+    <dimen name="factor_mdpi_03_dp">6dp</dimen>
+    <dimen name="factor_mdpi_02_dp">4dp</dimen>
+    <dimen name="factor_mdpi_01_dp">2dp</dimen>
+
+    <!-- Some Special DP Values -->
+
+    <!-- All Text Size Values from 50 to 1 in SP -->
+    <!-- This file will be used for TextSize -->
+
+    <dimen name="textAppearance_mdpi_30_sp">60sp</dimen>
+    <dimen name="textAppearance_mdpi_21_sp">42sp</dimen>
+    <dimen name="textAppearance_mdpi_20_sp">40sp</dimen>
+    <dimen name="textAppearance_mdpi_16_sp">32sp</dimen>
+    <dimen name="textAppearance_mdpi_15_sp">30sp</dimen>
+    <dimen name="textAppearance_mdpi_14_sp">28sp</dimen>
+    <dimen name="textAppearance_mdpi_13_sp">26sp</dimen>
+    <dimen name="textAppearance_mdpi_12_sp">24sp</dimen>
+    <dimen name="textAppearance_mdpi_11_sp">22sp</dimen>
+    <dimen name="textAppearance_mdpi_10_sp">20sp</dimen>
+    <dimen name="textAppearance_mdpi_09_sp">18sp</dimen>
+    <dimen name="textAppearance_mdpi_08_sp">16sp</dimen>
+    <dimen name="textAppearance_mdpi_07_sp">14sp</dimen>
+    <dimen name="textAppearance_mdpi_06_sp">12sp</dimen>
+    <dimen name="textAppearance_mdpi_04_sp">8sp</dimen>
+    <dimen name="textAppearance_mdpi_01_sp">2sp</dimen>
+
+</resources>

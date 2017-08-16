@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_margin="@dimen/factor_mdpi_02_dp"
+    android:layout_height="match_parent"
+    android:background="@color/popupTextColor1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/factor_mdpi_02_dp">
+
+        <ImageView
+            android:id="@+id/product_sub_option_adapter_row_layout_iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/ic_check_circle" />
+
+        <TextView
+            android:id="@+id/product_sub_option_adapter_row_layout_tv_sub_option_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_sub_option_adapter_row_layout_iv_arrow"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/factor_mdpi_02_dp"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+        <TextView
+            android:id="@+id/product_sub_option_adapter_row_layout_tv_sub_option_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_margin="@dimen/factor_mdpi_02_dp"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+    </RelativeLayout>
+</LinearLayout>

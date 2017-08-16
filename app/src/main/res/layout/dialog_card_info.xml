@@ -1,0 +1,199 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cc_payment"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/factor_mdpi_10_dp"
+        android:layout_marginRight="@dimen/factor_mdpi_10_dp"
+        android:layout_weight="90"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:layout_weight="15"
+            android:gravity="center"
+            android:text="CARD INFORMATION"
+            android:textColor="#464646"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <EditText
+                android:id="@+id/DIALOG_CARD_INFO_EDT_CC_NUMBER"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="2.3"
+                android:background="@drawable/name_editbox_bg"
+                android:gravity="center"
+                android:hint="Enter Credit Card Number"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp" >
+
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/DIALOG_CARD_INFO_BTN_SUBMIT"
+                    android:layout_width="@dimen/factor_mdpi_25_dp"
+                    android:layout_height="@dimen/factor_mdpi_25_dp"
+                    android:background="@drawable/cash_btn_bg" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="16"
+                android:gravity="center_vertical"
+                android:text="@string/expiration"
+                android:textColor="#464646"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:gravity="center_vertical"
+                android:text="Cvv2 Number"
+                android:textColor="#464646"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/DIALOG_CARD_INFO_EDT_MONTH"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:background="@drawable/exp_date_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+            <EditText
+                android:id="@+id/DIALOG_CARD_INFO_EDT_YEAR"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:background="@drawable/exp_date_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+
+            <EditText
+                android:id="@+id/DIALOG_CARD_INFO_EDT_Cvv2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:background="@drawable/name_editbox_bg"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_09_sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="Enter Card Holder Name"
+            android:textColor="#464646"
+            android:textSize="@dimen/textAppearance_mdpi_09_sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/DIALOG_CARD_INFO_EDT_NAME"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:background="@drawable/name_editbox_bg"
+                android:gravity="center"
+                android:hint="@string/name_as_on_the_card"
+                android:imeOptions="actionDone"
+                android:inputType="textCapCharacters"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:gravity="bottom|right"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/DIALOG_CARD_INFO_BTN_CANCEL"
+                android:layout_width="@dimen/factor_mdpi_12_dp"
+                android:layout_height="@dimen/factor_mdpi_12_dp"
+                android:background="@drawable/cancel_dialog" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

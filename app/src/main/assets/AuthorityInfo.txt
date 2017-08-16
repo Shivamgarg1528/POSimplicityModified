@@ -1,0 +1,75 @@
+{
+  "Details": [
+    {
+      "settingName": "Admin",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "DailyReport",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+      
+    },
+    {
+      "settingName": "ShiftReport",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+     {
+      "settingName": "TipReport",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Transaction Dollar Discount",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Transaction Percentage Discount",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Item Dollar Discount",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Item Percentage Discount",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Refund",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    },
+    {
+      "settingName": "Drawer",
+      "clerkEnable": "0",
+      "managerEnable": "0",
+      "supervisorEnable": "0",
+      "adminEnable":"1"
+    }
+  ]
+}

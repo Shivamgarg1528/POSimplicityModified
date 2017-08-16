@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/switch_adapter_iv_state"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/factor_mdpi_17_dp"
+    android:layout_marginStart="@dimen/factor_mdpi_20_dp"
+    android:layout_marginEnd="@dimen/factor_mdpi_20_dp"
+    android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+    android:gravity="center_vertical"
+    android:drawablePadding="@dimen/factor_mdpi_10_dp"
+    android:textColor="@color/colorWhite"
+    android:textSize="@dimen/textAppearance_mdpi_10_sp" />

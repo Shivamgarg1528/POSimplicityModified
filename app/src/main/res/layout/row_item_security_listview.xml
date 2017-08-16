@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <TextView
+            android:id="@+id/settingName"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/factor_mdpi_22_dp"
+            android:layout_weight="50"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <CheckedTextView
+            android:id="@+id/clerkBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:checkMark="?android:attr/textCheckMark" />
+
+        <CheckedTextView
+            android:id="@+id/managerBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:checkMark="?android:attr/textCheckMark" />
+
+        <CheckedTextView
+            android:id="@+id/supervisorBox"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:checkMark="?android:attr/textCheckMark" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+</LinearLayout>

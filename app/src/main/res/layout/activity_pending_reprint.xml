@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar" />
+
+    <Spinner
+        android:id="@+id/activity_pending_reprint_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorWhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/activity_pending_reprint_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:choiceMode="singleChoice"
+            android:layout_weight="1"
+            android:padding="@dimen/factor_mdpi_04_dp" />
+
+        <TextView
+            android:id="@+id/activity_pending_reprint_tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_05_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+            android:background="@drawable/ic_green_bg"
+            android:gravity="center"
+            android:text="@string/string_save"
+            android:visibility="invisible"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

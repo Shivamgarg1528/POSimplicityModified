@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/activity_function_drawer_item_add_customer"
+        android:title="@string/string_add_customer" />
+
+    <item
+        android:id="@+id/activity_function_drawer_item_add_table"
+        android:title="@string/string_add_table" />
+
+
+    <item
+        android:id="@+id/activity_function_drawer_item_add_clerk"
+        android:title="@string/string_add_clerk" />
+
+    <item
+        android:id="@+id/activity_function_drawer_item_time_clock"
+        android:title="@string/string_time_clock" />
+
+    <item
+        android:id="@+id/activity_function_drawer_item_drawer"
+        android:title="@string/string_drawer" />
+
+    <item
+        android:id="@+id/activity_function_drawer_item_payouts"
+        android:title="@string/string_payouts" />
+
+    <item android:title="@string/string_tender">
+        <menu>
+            <item
+                android:id="@+id/activity_function_drawer_item_reward"
+                android:title="@string/string_rewards" />
+            <item
+                android:id="@+id/activity_function_drawer_item_gift"
+                android:title="@string/string_gift"/>
+        </menu>
+    </item>
+
+    <item android:title="@string/string_dejavoo">
+        <menu>
+            <item
+                android:id="@+id/activity_function_drawer_item_dejavoo_tip_adjustment"
+                android:title="@string/string_tip_adjustment" />
+            <item
+                android:id="@+id/activity_function_drawer_item_dejavoo_return_adjustment"
+                android:title="@string/string_return_adjustment" />
+        </menu>
+    </item>
+
+    <item android:title="@string/string_tsys">
+        <menu>
+            <item
+                android:id="@+id/activity_function_drawer_item_tsys_tip_adjustment"
+                android:title="@string/string_tip_adjustment" />
+            <item
+                android:id="@+id/activity_function_drawer_item_tsys_return_adjustment"
+                android:title="@string/string_return_adjustment"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/activity_function_drawer_item_exit"
+        android:title="@string/string_exit" />
+
+</menu>

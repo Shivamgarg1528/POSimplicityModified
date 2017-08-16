@@ -1,0 +1,20 @@
+{"paymentModeList":[
+  {
+    "paymentModeId":1,
+    "paymentModeName":"Custom Tender 1",
+    "paymentModeSortId":"1",
+    "paymentModeStatus":false,
+    "paymentModeDeletable":false,
+    "paymentModeType":"tender",
+    "paymentModeDes":""
+  },{
+    "paymentModeId":2,
+    "paymentModeName":"Custom Tender 2",
+    "paymentModeSortId":"1",
+    "paymentModeStatus":false,
+    "paymentModeDeletable":false,
+    "paymentModeType":"tender",
+    "paymentModeDes":""
+  }
+  ]
+}

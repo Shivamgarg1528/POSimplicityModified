@@ -1,0 +1,28 @@
+{
+  "Details": [
+    {
+      "roleName": "Admin",
+      "rolePassword": "",
+      "roleActive": "1",
+      "roleId":"0"
+    },
+    {
+      "roleName": "Clerk",
+      "rolePassword": "",
+      "roleActive": "0",
+      "roleId":"1"
+    },
+    {
+      "roleName": "Manager",
+      "rolePassword": "",
+      "roleActive": "0",
+      "roleId":"2"
+    },
+    {
+      "roleName": "Supervisor",
+      "rolePassword": "",
+      "roleActive": "0",
+      "roleId":"3"
+    }
+  ]
+}

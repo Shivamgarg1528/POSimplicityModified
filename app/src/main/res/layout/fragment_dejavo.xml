@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="05dp"
+            android:layout_weight="45" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:gravity="center_vertical"
+                        android:text="Dejavoo IP Address :"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/factor_mdpi_10_dp"
+                         />
+
+                    <EditText
+                        android:id="@+id/Fragment_Dejavo_Edt_Ip_Address"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:hint="Enter IP Address Here : 173.220.2.158:8483"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/factor_mdpi_08_dp"
+                         />
+                    <!-- 173.220.2.158:8483 -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1" >
+
+                    <CheckedTextView
+                        android:id="@+id/Fragment_Dejavoo_Switch_Payment_Via_Bluetooth"
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_height="match_parent"
+                        android:checkMark="?android:attr/textCheckMark"
+                        android:gravity="center_vertical"
+                        android:text="Dejavoo Bluetooth (No Device Selected)"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                         />
+                    <View android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".1"/>
+                    
+                    <CheckedTextView
+                        android:id="@+id/Fragment_Dejavoo_Switch_State"
+                        android:layout_width="0dp"
+                        android:layout_weight=".3"
+                        android:enabled="false"
+                        android:layout_height="match_parent"
+                        android:checkMark="?android:attr/textCheckMark"
+                        android:gravity="center_vertical"
+                        android:text="Connection State"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                         />
+                    
+                </LinearLayout>
+
+                <CheckedTextView
+                    android:id="@+id/Fragment_Dejavoo_Switch_Prompt_Debit_Credit_Option"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:checkMark="?android:attr/textCheckMark"
+                    android:gravity="center_vertical"
+                    android:text="Prompt For Debit/Credit PaymentType"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                     />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:gravity="center_vertical"
+            android:text="Select Any Dejavo Option :-"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/factor_mdpi_08_dp"
+             />
+
+        <ListView
+            android:id="@+id/Fragment_Dejavo_ListView_Items"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:choiceMode="singleChoice" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popup_checkout_menu_apply_discount"
+        android:title="Apply % Discount" />
+    <item
+        android:id="@+id/popup_checkout_menu_apply_dollar_discount"
+        android:title="Apply $ Discount" />
+    <item
+        android:id="@+id/popup_checkout_menu_change_qty"
+        android:title="Modify Quantity" />
+
+</menu>

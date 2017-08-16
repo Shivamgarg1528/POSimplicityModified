@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item android:title="Assign Transaction">
+            <menu>
+                <item
+                    android:id="@+id/payment_option_popup_menu_assign_customer"
+                    android:title="Customer" />
+                <item
+                    android:id="@+id/payment_option_popup_menu_assign_clerk"
+                    android:title="Clerk" />
+            </menu>
+        </item>
+        <item
+            android:id="@+id/payment_option_popup_menu_split"
+            android:title="Bill Split" />
+        <item
+            android:id="@+id/payment_option_popup_menu_comment"
+            android:title="Comment" />
+        <item
+            android:id="@+id/payment_option_popup_menu_manual_save"
+            android:title="Manual Save" />
+    </group>
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#505050</color>
+    <color name="list_background_pressed">#414141</color>
+    <color name="list_divider">#272727</color>
+
+
+    <!-- New Colors-->
+    <color name="colorAccent">@android:color/holo_orange_dark</color>
+    <color name="colorPrimary">#666666</color>
+    <color name="colorPrimaryDark">#1E1E1E</color>
+    <color name="colorWhite">@android:color/white</color>
+    <color name="popupTextColor">#686868</color>
+    <color name="popupTextColor1">#3F5771</color>
+
+</resources>

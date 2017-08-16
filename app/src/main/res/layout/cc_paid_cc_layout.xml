@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/factor_mdpi_02_dp"
+    android:paddingTop="@dimen/factor_mdpi_02_dp"
+    android:weightSum="100" >
+
+    <TextView
+        android:id="@+id/fieldName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/factor_mdpi_25_dp"
+        android:layout_weight="30"
+        android:background="@drawable/shape_unselected_button"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/factor_mdpi_06_dp"
+        android:singleLine="true"
+        android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+    <View
+        android:layout_width="@dimen/factor_mdpi_02_dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/fieldValue"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/factor_mdpi_25_dp"
+        android:layout_weight="50"
+        android:background="@drawable/shape_unselected_button"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+</LinearLayout>

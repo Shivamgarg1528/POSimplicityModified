@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_35_dp"
+        android:layout_margin="@dimen/factor_mdpi_02_dp"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <ImageView
+            android:id="@+id/Split_Bill_Adapter_Row_IV_billStatus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:src="@drawable/bill_pending" />
+
+        <TextView
+            android:id="@+id/Split_Bill_Adapter_Row_TV_Customer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Bill 1"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <EditText
+                android:id="@+id/Split_Bill_Adapter_Row_EDT_billAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="numberDecimal|numberSigned"
+                android:singleLine="true"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/Split_Bill_Adapter_Row_Btn_ApplyBillChanges"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/factor_mdpi_03_dp"
+                android:layout_weight="20"
+                android:background="@drawable/update_btn"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/Split_Bill_Adapter_Row_EDT_billPayAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Split_Bill_Adapter_Row_TV_BillPaidAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Split_Bill_Adapter_Row_TV_BillDueAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/Split_Bill_Adapter_Row_SP_PaymentMode"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/factor_mdpi_20_dp"
+            android:layout_gravity="center"
+            android:entries="@array/payment_mode"
+            android:layout_marginLeft="@dimen/factor_mdpi_02_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_02_dp"
+            android:layout_weight="15" />
+
+        <Button
+            android:id="@+id/Split_Bill_Adapter_Row_Do_Payment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/factor_mdpi_02_dp"
+            android:layout_weight="12"
+            android:background="@drawable/bill_payment_btn"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Payment"
+            android:textColor="#497020"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

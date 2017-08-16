@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/dialog_card_swipe_input_edt_card_info"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/factor_mdpi_02_dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:inputType="text"
+        android:textColor="@android:color/transparent"
+        android:textCursorDrawable="@null" />
+
+    <LinearLayout
+        android:id="@+id/dialog_card_swipe_input_ll_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/factor_mdpi_02_dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/factor_mdpi_02_dp"
+            android:gravity="center"
+            android:text="Processing Card\nPlease Wait..."
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+    </LinearLayout>
+
+</LinearLayout>

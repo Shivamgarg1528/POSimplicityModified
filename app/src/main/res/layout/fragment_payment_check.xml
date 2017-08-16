@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/factor_mdpi_10_dp"
+    android:paddingEnd="@dimen/factor_mdpi_25_dp"
+    android:paddingStart="@dimen/factor_mdpi_25_dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_40_dp"
+        android:background="#535656">
+
+        <TextView
+            android:text="@string/string_pay_by_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold|italic"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+        <ImageView
+            android:id="@+id/fragment_payment_check_iv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/factor_mdpi_04_dp"
+            android:background="@null"
+            android:src="@drawable/cash_btn_bg"
+            android:contentDescription="Pay Through Check" />
+    </RelativeLayout>
+</LinearLayout>

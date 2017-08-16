@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:padding="@dimen/factor_mdpi_03_dp">
+
+        <TextView
+            android:id="@+id/product_option_adapter_row_layout_tv_option_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/popupTextColor"
+            android:textSize="@dimen/textAppearance_mdpi_15_sp" />
+
+        <ImageView
+            android:id="@+id/product_option_adapter_row_layout_iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_arrow_drop_down" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/product_option_adapter_row_layout_rv"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="100dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/popupTextColor1" />
+</LinearLayout>

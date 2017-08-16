@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/drawable_assign_transaction_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/Dailog_Discount_TV_Header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/factor_mdpi_06_dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_15_sp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/cancelAssignDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@android:drawable/btn_dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="27"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="80" >
+
+            <EditText
+                android:id="@+id/cusMobbox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:inputType="phone"
+                android:background="@android:color/transparent"
+                android:maxLength="10"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="13"
+        android:gravity="center|right"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="85" >
+
+            <TextView
+                android:id="@+id/custNameTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11"
+        android:gravity="center|right"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="86" >
+
+            <TextView
+                android:id="@+id/customerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="29"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/assignTranBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/assing_trans_btn"
+            android:gravity="center"
+            android:textSize="@dimen/factor_mdpi_07_dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/keyss_keyregister_sales_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50"
+        android:gravity="center_horizontal|bottom" >
+
+        <TextView
+            android:id="@+id/Activity_Operator_Textview_LoginAs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/merchant"
+            android:gravity="center"
+            android:textColor="#efc042"
+            android:textSize="@dimen/factor_mdpi_13_dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35" >
+
+            <Spinner
+                android:id="@+id/Operator_Activity_Spinner_Roles"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <LinearLayout
+        android:id="@+id/Activity_Operator_LL_Username"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <EditText
+            android:id="@+id/Activity_Operator_Edt_Username"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/user_text_field"
+            android:hint="@string/merchant"
+            android:paddingLeft="@dimen/factor_mdpi_05_dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a9a9a9" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/Activity_Operator_LL_Password"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <EditText
+            android:id="@+id/Activity_Operator_Edt_Password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/pwd_text_field"
+            android:hint="@string/merchantPassword"
+            android:paddingLeft="@dimen/factor_mdpi_05_dp"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#a9a9a9" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_login"
+            android:clickable="true"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

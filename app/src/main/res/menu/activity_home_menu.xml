@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/string_order">
+        <menu>
+            <item
+                android:id="@+id/left_nav_pending"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/string_pending" />
+            <item
+                android:id="@+id/left_nav_reprint"
+                android:icon="@drawable/ic_print"
+                android:title="@string/string_reprint" />
+            <item
+                android:icon="@drawable/ic_return"
+                android:title="@string/string_return" />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/string_discount">
+        <menu>
+            <item
+                android:id="@+id/left_nav_discount_apply"
+                android:icon="@drawable/ic_left_nav_discount_apply"
+                android:title="@string/string_discount_apply" />
+
+            <item
+                android:id="@+id/left_nav_discount_clear"
+                android:icon="@drawable/ic_left_nav_discount_clear"
+                android:title="@string/string_discount_clear" />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/string_other">
+        <menu>
+
+            <item
+                android:id="@+id/left_nav_setting"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/string_settings" />
+
+            <item
+                android:id="@+id/left_nav_clear_cart"
+                android:icon="@drawable/ic_clear_cart"
+                android:title="@string/string_clear_cart" />
+            <item
+                android:id="@+id/left_nav_function"
+                android:icon="@drawable/ic_function"
+                android:title="@string/string_function" />
+            <item
+                android:id="@+id/left_nav_report"
+                android:icon="@drawable/ic_report"
+                android:title="@string/string_reports" />
+
+            <item
+                android:id="@+id/left_nav_logout"
+                android:icon="@drawable/ic_left_nav_logout"
+                android:title="@string/string_logout" />
+
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="5"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="10"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="20"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="25"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="50"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="100"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_125"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="125"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_250"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="250"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="500"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_625"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="625"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_1250"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="1250"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/keypad_layout_extra_key_2500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dollar_btn"
+            android:gravity="center"
+            android:text="2500"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+</TableLayout>

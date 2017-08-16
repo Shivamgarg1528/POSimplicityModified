@@ -1,0 +1,266 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/factor_mdpi_05_dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:gravity="center_vertical"
+                android:text="@string/string_text_to_display"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:gravity="center"
+                android:text="@string/leftmargin"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/fragment_printer_edt_text1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:gravity="center_vertical"
+                android:hint="@string/string_header_text"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+            <Spinner
+                android:id="@+id/fragment_printer_sp_space1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/fragment_printer_edt_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:gravity="center_vertical"
+                android:hint="@string/string_header_text"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+            <Spinner
+                android:id="@+id/fragment_printer_sp_space2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/fragment_printer_edt_text3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:gravity="center_vertical"
+                android:hint="@string/string_header_text"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+            <Spinner
+                android:id="@+id/fragment_printer_sp_space3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/fragment_printer_edt_text4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.3"
+                android:gravity="center_vertical"
+                android:hint="@string/string_header_text"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+            <Spinner
+                android:id="@+id/fragment_printer_sp_space4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_printer_settings"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_printer_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginEnd="@dimen/factor_mdpi_10_dp"
+            android:layout_marginStart="@dimen/factor_mdpi_10_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_customer_receipt_option"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_printer_rv_customer_receipt_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginEnd="@dimen/factor_mdpi_10_dp"
+            android:layout_marginStart="@dimen/factor_mdpi_10_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp"
+            android:gravity="center_vertical"
+            android:text="@string/string_kitchen_receipt_option"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_printer_rv_kitchen_receipt_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_01_dp"
+            android:layout_marginEnd="@dimen/factor_mdpi_10_dp"
+            android:layout_marginStart="@dimen/factor_mdpi_10_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_01_dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorWhite" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/factor_mdpi_05_dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fragment_printer_tv_drawer_settings"
+                    android:text="@string/string_drawer_setting"
+                    style="@style/MyTextView"/>
+
+                <TextView
+                    android:id="@+id/fragment_printer_tv_test_print"
+                    android:layout_marginStart="@dimen/factor_mdpi_05_dp"
+                    android:text="@string/string_test_print"
+                    style="@style/MyTextView"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</ScrollView>

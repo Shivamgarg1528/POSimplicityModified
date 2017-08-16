@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cc_payment"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="bottom|left"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/cardinfoedittext"
+            android:layout_width="@dimen/factor_mdpi_01_dp"
+            android:layout_height="@dimen/factor_mdpi_01_dp"
+            android:background="@android:color/transparent" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="90"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="50"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tipamtMsg"
+                    android:textColor="#747474"
+                    android:textSize="@dimen/textAppearance_mdpi_06_sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/tipAmtEditText"
+                    android:layout_width="@dimen/factor_mdpi_40_dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:enabled="false"
+                    android:inputType="phone"
+                    android:text="0.00"
+                    android:textColor="#424242"
+                    android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <Button
+                android:id="@+id/chooseOfflineTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_04_dp"
+                android:layout_weight="30"
+                android:background="@drawable/ic_drawable_cc_button_bg"
+                android:gravity="center"
+                android:onClick="onCreditFragmentClick"
+                android:singleLine="true"
+                android:text="OFFLINE PAYMENT"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/chooseManualTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_04_dp"
+                android:layout_weight="30"
+                android:background="@drawable/ic_drawable_cc_button_bg"
+                android:gravity="center"
+                android:onClick="onCreditFragmentClick"
+                android:singleLine="true"
+                android:text="ENTER CARD MANUALLY"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dejavooo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/factor_mdpi_04_dp"
+                android:layout_weight="30"
+                android:background="@drawable/ic_drawable_cc_button_bg"
+                android:gravity="center"
+                android:onClick="onCreditFragmentClick"
+                android:singleLine="true"
+                android:text="PROCESS NOW"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="bottom|center" >
+
+        <TextView
+            android:id="@+id/btnCancelCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_03_dp"
+            android:background="@drawable/cancel_dialog"
+            android:clickable="true"
+            android:onClick="onCreditFragmentClick" />
+    </LinearLayout>
+
+</LinearLayout>

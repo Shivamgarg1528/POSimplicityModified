@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:padding="@dimen/factor_mdpi_01_dp"
+    android:background="@color/colorWhite"
+    android:weightSum="1"
+    android:layout_gravity="center"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <AutoCompleteTextView
+            android:id="@+id/dialog_transaction_id_layout_edt_trans_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:singleLine="true"
+            android:hint="Enter Transaction Id"
+            android:textColorHint="@color/popupTextColor"
+            android:textColor="@color/popupTextColor1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_transaction_id_layout_tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/ic_green_bg"
+        android:gravity="center"
+        android:text="@string/string_ok"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/textAppearance_mdpi_12_sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

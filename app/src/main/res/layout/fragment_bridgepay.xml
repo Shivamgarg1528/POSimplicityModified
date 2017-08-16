@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/fragment_bridge_pay_edt_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:ems="15"
+        android:gravity="center"
+        android:hint="@string/string_hint_bridge_pay_user_name"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+    <EditText
+        android:id="@+id/fragment_bridge_pay_edt_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:ems="15"
+        android:gravity="center"
+        android:hint="@string/string_hint_bridge_pay_user_password"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:textColor="@color/colorAccent"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+</LinearLayout>

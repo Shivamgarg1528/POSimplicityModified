@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/free"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@drawable/free_table_popup_bg"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/cancelOnSeatPopup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popback"
+                android:singleLine="true"
+                android:tag="0"
+                android:text="Cancel"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Select Numbers Of Bills"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_06_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/doneOnSeatPopup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/popback"
+                android:singleLine="true"
+                android:tag="1"
+                android:text="Done"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="80"
+        android:background="@drawable/cc_payment"
+        android:gravity="center" >
+
+        <NumberPicker
+            android:id="@+id/selectSeats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/factor_mdpi_05_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_05_dp" />
+    </LinearLayout>
+
+</LinearLayout>

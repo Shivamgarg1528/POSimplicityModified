@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- @ Author Shivam Garg -->
+<resources>
+
+    <!-- All Dimensions Values From 50 to 1 in DP -->
+    <!-- This file will be used for the Margin,padding,width, height, -->
+
+    <dimen name="factor_mdpi_40_dp">40dp</dimen>
+    <dimen name="factor_mdpi_35_dp">35dp</dimen>
+    <dimen name="factor_mdpi_30_dp">30dp</dimen>
+    <dimen name="factor_mdpi_28_dp">28dp</dimen>
+    <dimen name="factor_mdpi_25_dp">25dp</dimen>
+    <dimen name="factor_mdpi_22_dp">22dp</dimen>
+    <dimen name="factor_mdpi_21_dp">21dp</dimen>
+    <dimen name="factor_mdpi_20_dp">20dp</dimen>
+    <dimen name="factor_mdpi_17_dp">17dp</dimen>
+    <dimen name="factor_mdpi_16_dp">16dp</dimen>
+    <dimen name="factor_mdpi_15_dp">15dp</dimen>
+    <dimen name="factor_mdpi_14_dp">14dp</dimen>
+    <dimen name="factor_mdpi_13_dp">13dp</dimen>
+    <dimen name="factor_mdpi_12_dp">12dp</dimen>
+    <dimen name="factor_mdpi_11_dp">11dp</dimen>
+    <dimen name="factor_mdpi_10_dp">10dp</dimen>
+    <dimen name="factor_mdpi_08_dp">8dp</dimen>
+    <dimen name="factor_mdpi_07_dp">7dp</dimen>
+    <dimen name="factor_mdpi_06_dp">6dp</dimen>
+    <dimen name="factor_mdpi_05_dp">5dp</dimen>
+    <dimen name="factor_mdpi_04_dp">4dp</dimen>
+    <dimen name="factor_mdpi_03_dp">3dp</dimen>
+    <dimen name="factor_mdpi_02_dp">2dp</dimen>
+    <dimen name="factor_mdpi_01_dp">1dp</dimen>
+
+    <!-- Some Special DP Values -->
+
+    <!-- All Text Size Values from 50 to 1 in SP -->
+    <!-- This file will be used for TextSize -->
+
+    <dimen name="textAppearance_mdpi_30_sp">30sp</dimen>
+    <dimen name="textAppearance_mdpi_21_sp">21sp</dimen>
+    <dimen name="textAppearance_mdpi_20_sp">20sp</dimen>
+    <!-- <dimen name="textAppearance_mdpi_17_sp">17sp</dimen> -->
+    <dimen name="textAppearance_mdpi_16_sp">16sp</dimen>
+    <dimen name="textAppearance_mdpi_15_sp">15sp</dimen>
+    <dimen name="textAppearance_mdpi_14_sp">14sp</dimen>
+    <dimen name="textAppearance_mdpi_13_sp">13sp</dimen>
+    <dimen name="textAppearance_mdpi_12_sp">12sp</dimen>
+    <dimen name="textAppearance_mdpi_11_sp">11sp</dimen>
+    <dimen name="textAppearance_mdpi_10_sp">10sp</dimen>
+    <dimen name="textAppearance_mdpi_09_sp">9sp</dimen>
+    <dimen name="textAppearance_mdpi_08_sp">8sp</dimen>
+    <dimen name="textAppearance_mdpi_07_sp">7sp</dimen>
+    <dimen name="textAppearance_mdpi_06_sp">6sp</dimen>
+    <dimen name="textAppearance_mdpi_04_sp">4sp</dimen>
+    <dimen name="textAppearance_mdpi_01_sp">1sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+</resources>

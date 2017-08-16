@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="80"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="100" >
+
+       
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="80" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/factor_mdpi_04_dp"
+                    android:layout_weight="20"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical"
+                        android:text="TSYS User Name :"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/factor_mdpi_10_dp" />
+
+                    <EditText
+                        android:id="@+id/Fragment_TSYS_Edt_UserName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom|start"
+                        android:hint="Enter User Name Here"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/factor_mdpi_08_dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/factor_mdpi_04_dp"
+                    android:layout_weight="20"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical"
+                        android:text="TSYS Password:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/factor_mdpi_10_dp" />
+
+                    <EditText
+                        android:id="@+id/Fragment_TSYS_Edt_Password"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom|start"
+                        android:hint="Enter Password Here"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/factor_mdpi_08_dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/factor_mdpi_04_dp"
+                    android:layout_weight="20"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical"
+                        android:text="TSYS Device Id :"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/factor_mdpi_10_dp" />
+
+                    <EditText
+                        android:id="@+id/Fragment_TSYS_Edt_DeviceId"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom|start"
+                        android:hint="Enter Device Id Here"
+                        android:imeOptions="actionNext"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/factor_mdpi_08_dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/factor_mdpi_04_dp"
+                    android:layout_weight="20"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="center_vertical"
+                        android:text="TSYS Merchant Id:"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/factor_mdpi_10_dp" />
+
+                    <EditText
+                        android:id="@+id/Fragment_TSYS_Edt_Merchant_Id"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="50"
+                        android:gravity="bottom|start"
+                        android:hint="Enter Merchant Id Here"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="@dimen/factor_mdpi_08_dp" />
+                </TableRow>
+                
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/factor_mdpi_04_dp"
+                    android:layout_weight="20"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="100" >
+
+                    <Button
+                        android:id="@+id/Fragment_TSYS_Btn_GenerateKey"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@drawable/shape_unselected_button"
+                        android:text="Generate Key"
+                        android:textSize="@dimen/textAppearance_mdpi_11_sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5" />
+
+                    <Button
+                        android:id="@+id/Fragment_TSYS_Btn_Updatekey"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="30"
+                        android:background="@drawable/shape_unselected_button"
+                        android:text="Update Key"
+                        android:textSize="@dimen/textAppearance_mdpi_11_sp" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

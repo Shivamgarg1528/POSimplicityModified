@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_qty_dialgo_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="30"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="70"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <TextView
+                android:id="@+id/itemNametextview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/productNametext"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#6c6c6c"
+                android:textSize="@dimen/textAppearance_mdpi_14_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/factor_mdpi_02_dp"
+            android:layout_weight="30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="11"
+            android:gravity="center" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="15"
+                android:gravity="center_vertical"
+                android:text="@string/addQtytext"
+                android:textColor="#9d9d9d"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/QtyofItems"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="45"
+                android:background="@drawable/qty_bg"
+                android:gravity="center"
+                android:maxLength="3"
+                android:text="@string/itemQtytext"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_21_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:gravity="center_vertical"
+                android:text="@string/subtotaltext"
+                android:textColor="#9d9d9d"
+                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemPricetextview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/factor_mdpi_04_dp"
+                android:text="@string/pricetext"
+                android:textColor="#676767"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="47"
+            android:gravity="center_vertical" >
+
+            <include layout="@layout/keypad_product_qty_dialog" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/addItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="60"
+            android:background="@drawable/ic_green_bg"
+            android:onClick="onKeyPadClick"
+            android:text="ADD ITEM"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_10_sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="40"
+            android:layout_marginRight="@dimen/factor_mdpi_03_dp"
+            android:layout_marginBottom="@dimen/factor_mdpi_03_dp"
+            android:gravity="bottom|right" >
+
+            <ImageButton
+                android:id="@+id/cancel_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="true"
+                android:onClick="onKeyPadClick"
+                android:src="@drawable/cancel_dialog" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/options_bg"
+    android:padding="10dp" 
+    android:focusable="false">
+
+    <ImageView
+        android:id="@+id/itemoptionCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />  
+
+    <TextView
+        android:id="@+id/optionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="40dp"
+        android:text="Name"
+        android:textColor="#3f5771" />
+
+    <TextView
+        android:id="@+id/childprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingRight="10dp"
+        android:text="50.00"
+        android:textColor="#3f5771" />
+
+</RelativeLayout>

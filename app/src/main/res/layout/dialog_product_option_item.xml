@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/factor_mdpi_02_dp"
+        android:layout_weight="7"
+        android:background="@drawable/tab_btn_items_off"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/factor_mdpi_10_dp"
+        android:text="Product Options"
+        android:textColor="#3f5771"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold|italic" >
+    </TextView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/factor_mdpi_03_dp"
+        android:layout_weight="46" >
+
+        <ExpandableListView
+            android:id="@+id/options_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ExpandableListView>
+
+        <TextView
+            android:id="@+id/Dialog_Product_Option_Tv_POption"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:focusable="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="No Custom Options Availabe For Selected Product..."
+            android:textColor="#3f5771"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:gravity="center" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="30"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="15"
+                    android:gravity="center_vertical"
+                    android:text="Product Price"
+                    android:textColor="#9d9d9d"
+                    android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Dialog_Product_Option_Tv_Price"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="45"
+                    android:background="@drawable/qty_bg"
+                    android:gravity="center"
+                    android:text="@string/itemQtytext"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textAppearance_mdpi_16_sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Dialog_Product_Option_LL_KeyPadOfButtons"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="47"
+                android:gravity="center_vertical"
+                android:visibility="invisible" >
+
+                <include layout="@layout/keypad_product_qty_dialog" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="90"
+            android:gravity="left|bottom" >
+
+            <Button
+                android:id="@+id/addItemsOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/factor_mdpi_02_dp"
+                android:background="@drawable/ic_green_bg"
+                android:onClick="onKeyPadClick"
+                android:text="ADD ITEM"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="bottom|left" >
+
+            <ImageButton
+                android:id="@+id/canceloptionPopUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/factor_mdpi_04_dp"
+                android:layout_marginLeft="@dimen/factor_mdpi_11_dp"
+                android:src="@drawable/cancel_dialog"
+                android:background="@null"
+                android:onClick="onKeyPadClick" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

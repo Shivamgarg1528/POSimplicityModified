@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogs_bg" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/Fragment_Gift_Card_LL_Main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            android:weightSum="100" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="70"
+                android:background="#ffffff" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <WebView
+                        android:id="@+id/webview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="fitCenter" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar1"
+                        style="?android:attr/progressBarStyleLarge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="29.5"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="80"
+                    android:background="@drawable/cashpayment_bg"
+                    android:orientation="vertical"
+                    android:weightSum="100" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="13"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="40"
+                            android:orientation="vertical"
+                            android:weightSum="2" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="Item Total"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#626262"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="Transaction Subtotal"
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textColor="#626262"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="30"
+                            android:gravity="right"
+                            android:orientation="vertical"
+                            android:weightSum="2" >
+
+                            <TextView
+                                android:id="@+id/totalAmtTextview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|right"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/subtotalAmtTextview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|right"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/textAppearance_mdpi_08_sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="right|bottom" >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="22"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="3dp"
+                            android:layout_weight="52"
+                            android:gravity="top|left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Value Entered"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/textAppearance_mdpi_06_sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/enteredValueTextview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textSize="@dimen/textAppearance_mdpi_11_sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="center|right" >
+
+                            <Button
+                                android:id="@+id/btn_cash"
+                                android:layout_width="@dimen/factor_mdpi_15_dp"
+                                android:layout_height="@dimen/factor_mdpi_15_dp"
+                                android:background="@drawable/cash_btn_bg"
+                                android:onClick="onCashFragmentClick" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="15"
+                            android:gravity="right|bottom" >
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="45"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="76"
+                            android:orientation="horizontal"
+                            android:weightSum="100" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="49"
+                                android:orientation="vertical"
+                                android:weightSum="4" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3" >
+
+                                    <Button
+                                        android:id="@+id/number1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="1"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="2"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="3"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3" >
+
+                                    <Button
+                                        android:id="@+id/number4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="4"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="5"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="6"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3" >
+
+                                    <Button
+                                        android:id="@+id/number7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="7"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="8"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="9"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:weightSum="3" >
+
+                                    <Button
+                                        android:id="@+id/number0"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="0"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/number00"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/btn_numbers"
+                                        android:onClick="onCashFragmentClick"
+                                        android:text="00"
+                                        android:textColor="#595959"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />
+
+                                    <Button
+                                        android:id="@+id/backspaceButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/backspace_key"
+                                        android:onClick="onCashFragmentClick"
+                                        android:textSize="20sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="16"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="100" >
+
+                        <Button
+                            android:id="@+id/balanceInquiry"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/factor_mdpi_04_dp"
+                            android:layout_marginTop="@dimen/factor_mdpi_04_dp"
+                            android:layout_weight="75"
+                            android:background="#3A5F0B"
+                            android:onClick="onCashFragmentClick"
+                            android:text="Balance Inquiry"
+                            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/Fragment_Gift_Card_Tender_Btn_Close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/factor_mdpi_06_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_06_dp"
+            android:background="@null"
+            android:onClick="onCashFragmentClick"
+            android:src="@drawable/cancel_dialog" />
+    </FrameLayout>
+
+</LinearLayout>

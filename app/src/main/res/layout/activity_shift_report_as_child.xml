@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/keyss_keyregister_sales_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <ListView
+        android:id="@+id/Activity_ShiftReport_ListView_Items_"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/factor_mdpi_08_dp"
+        android:layout_weight="78"
+        android:divider="@null"
+        android:scrollbars="none" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/Activity_ShiftReport_Button_Print_"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/factor_mdpi_01_dp"
+            android:layout_weight="25"
+            android:background="@drawable/shape_unselected_button"
+            android:text="Print Report"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3" />
+
+        <Button
+            android:id="@+id/Activity_ShiftReport_Button_New_Shift"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/factor_mdpi_01_dp"
+            android:layout_weight="25"
+            android:background="@drawable/shape_unselected_button"
+            android:text="New Shift"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+    </LinearLayout>
+
+</LinearLayout>

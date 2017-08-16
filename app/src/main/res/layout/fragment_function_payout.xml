@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/factor_mdpi_10_dp">
+
+    <Spinner
+        android:id="@+id/fragment_function_payout_spinner_payouts_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/colorWhite" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/fragment_function_payout_edt_pay_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:gravity="center"
+            android:maxLength="10"
+            android:hint="@string/string_payout_amount"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+        <EditText
+            android:id="@+id/fragment_function_payout_edt_pay_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="@string/string_payout_description"
+            android:imeOptions="actionDone"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@android:color/white"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp" />
+
+        <TextView
+            android:id="@+id/fragment_function_payout_tv_recycler_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+            android:gravity="center"
+            android:text="@string/string_select_predefined_payout_desc"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_function_recycler_view"
+            android:layout_width="480dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/factor_mdpi_04_dp"
+            android:layout_weight="1"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        <TextView
+            android:id="@+id/fragment_function_payout_tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_05_dp"
+            android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+            android:background="@drawable/ic_green_bg"
+            android:gravity="center"
+            android:text="@string/string_save"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

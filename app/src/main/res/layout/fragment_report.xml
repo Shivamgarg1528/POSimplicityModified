@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/factor_mdpi_05_dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_report_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/factor_mdpi_02_dp">
+
+        <TextView
+            android:id="@+id/fragment_report_tv_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/factor_mdpi_05_dp"
+            android:background="@drawable/ic_green_bg"
+            android:gravity="center"
+            android:text="@string/string_print"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_report_tv_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/factor_mdpi_05_dp"
+            android:background="@drawable/ic_green_bg"
+            android:gravity="center"
+            android:text="@string/string_chart"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fragment_report_tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_green_bg"
+            android:gravity="center"
+            android:text="@string/string_clear"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_12_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

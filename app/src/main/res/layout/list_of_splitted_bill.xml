@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cc_payment"
+    android:orientation="vertical"
+    android:weightSum="100" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/factor_mdpi_02_dp"
+        android:layout_weight="15"
+        android:background="@drawable/table_top"
+        android:orientation="horizontal"
+        android:weightSum="100" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:paddingLeft="@dimen/factor_mdpi_02_dp"
+            android:text="Bill\nStatus"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="Bill\nName"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:text="Bill\nAmount"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:gravity="center"
+                android:text="Bill\nUpdate"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40"
+                android:gravity="center"
+                android:text="Pay\nAmount"
+                android:textColor="#484848"
+                android:textSize="@dimen/textAppearance_mdpi_07_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="Paid\nAmount"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="center"
+            android:text="Due\nAmount"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="15"
+            android:gravity="center"
+            android:text="Pay\nMode"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="12"
+            android:gravity="center"
+            android:text="Do\nPayment"
+            android:textColor="#484848"
+            android:textSize="@dimen/textAppearance_mdpi_07_sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="70"
+        android:descendantFocusability="afterDescendants" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="bottom|right" >
+
+        <TextView
+            android:id="@+id/btnCancelCC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/factor_mdpi_03_dp"
+            android:layout_marginRight="@dimen/factor_mdpi_05_dp"
+            android:background="@drawable/cancel_dialog"
+            android:clickable="true" />
+    </LinearLayout>
+
+</LinearLayout>

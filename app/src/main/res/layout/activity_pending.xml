@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#72726e" >
+
+    <LinearLayout
+        android:id="@+id/Activity_Pending_AllData_LL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/factor_mdpi_05_dp"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="100" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/factor_mdpi_02_dp"
+                    android:text="Table No."
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/Activity_Pending_Spinner_Sort_Order"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:background="@android:color/white" />
+
+            <ListView
+                android:id="@+id/Activity_Pending_ListView_Order_Id"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="89.5"
+                android:background="@color/list_background"
+                android:choiceMode="singleChoice"
+                android:divider="@color/list_divider"
+                android:dividerHeight="@dimen/factor_mdpi_01_dp"
+                android:listSelector="@drawable/list_selector"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:background="@android:color/white" >
+        </View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="69.8"
+            android:orientation="vertical"
+            android:weightSum="100" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:weightSum="100" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="40"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/factor_mdpi_20_dp"
+                    android:text="ItemName."
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15"
+                    android:gravity="right|center_vertical"
+                    android:paddingRight="@dimen/factor_mdpi_07_dp"
+                    android:text="Qty."
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/factor_mdpi_03_dp"
+                    android:text="Discount."
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="15"
+                    android:gravity="center|right"
+                    android:paddingRight="@dimen/factor_mdpi_04_dp"
+                    android:text="Price."
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="@dimen/textAppearance_mdpi_10_sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5"
+                android:background="@android:color/white" />
+
+            <ExpandableListView
+                android:id="@+id/Activity_Pending_ExpandableList_View_Order_Info"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="74.5"
+                android:divider="@color/list_divider"
+                android:dividerHeight="@dimen/factor_mdpi_01_dp"
+                android:groupIndicator="@null" >
+            </ExpandableListView>
+
+            <Button
+                android:id="@+id/Activity_Pending_Btn_Pull_Order"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="@dimen/factor_mdpi_05_dp"
+                android:layout_marginRight="@dimen/factor_mdpi_05_dp"
+                android:layout_marginTop="@dimen/factor_mdpi_05_dp"
+                android:layout_weight="11"
+                android:background="@drawable/shape_unselected_button"
+                android:gravity="center"
+                android:text="Tap To Pull "
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/textAppearance_mdpi_12_sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Activity_Pending_Btn_TV_No_Order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Pending Orders Exist"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_30_sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</FrameLayout>

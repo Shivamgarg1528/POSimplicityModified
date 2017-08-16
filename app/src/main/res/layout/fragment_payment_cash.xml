@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/factor_mdpi_10_dp"
+    android:paddingEnd="@dimen/factor_mdpi_25_dp"
+    android:paddingStart="@dimen/factor_mdpi_25_dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/factor_mdpi_40_dp"
+        android:layout_marginTop="@dimen/factor_mdpi_10_dp"
+        android:background="#535656">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/factor_mdpi_04_dp"
+            android:text="Value Entered"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_08_sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/fragment_payment_cash_tv_entered_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingStart="@dimen/factor_mdpi_04_dp"
+            android:paddingTop="@dimen/factor_mdpi_08_dp"
+            android:text="125.54"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textAppearance_mdpi_13_sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/fragment_payment_cash_iv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/factor_mdpi_04_dp"
+            android:background="@null"
+            android:src="@drawable/cash_btn_bg" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include layout="@layout/keypad_layout_extra_key" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include layout="@layout/keypad_layout" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

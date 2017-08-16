@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:weightSum="100" >
+
+    <TextView
+        android:id="@+id/Pending_Id_List_Layout_Tv_Table_No"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:layout_weight="60"
+        android:gravity="center_vertical"
+        android:padding="@dimen/factor_mdpi_04_dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Pending_Id_List_Layout_Tv_ClerkName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/factor_mdpi_20_dp"
+        android:layout_weight="40"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:padding="@dimen/factor_mdpi_02_dp"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textAppearance_mdpi_08_sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
