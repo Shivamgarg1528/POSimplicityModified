@@ -382,7 +382,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener, 
             }
 
             case R.id.left_nav_clear_cart: {
-                AlertHelper.getAlertDialog(this, getString(R.string.string_are_you_sure_you_want_to_clear_cart), getString(R.string.string_yes), getString(R.string.string_no), new DialogInterface.OnClickListener() {
+                AlertHelper.showAlertDialog(this, getString(R.string.string_are_you_sure_you_want_to_clear_cart), getString(R.string.string_yes), getString(R.string.string_no), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (which == DialogInterface.BUTTON_POSITIVE) {

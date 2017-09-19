@@ -128,7 +128,7 @@ public class OperatorFragment extends BaseFragment implements AdapterView.OnItem
             if (mPasswordStr.equalsIgnoreCase(mRoleModel.getRolePassword()))
                 openHomeActivity();
             else {
-                AlertHelper.getAlertDialog(mBaseActivity, getString(R.string.string_account_may_be_suspended), getString(R.string.string_ok), null, null);
+                AlertHelper.showAlertDialog(mBaseActivity, getString(R.string.string_account_may_be_suspended), getString(R.string.string_ok), null, null);
             }
         }
     }
@@ -139,7 +139,7 @@ public class OperatorFragment extends BaseFragment implements AdapterView.OnItem
         if (pEventCode == Constants.API_VALIDATE_ADMIN) {
             Validate adminValidate = ((EasyHttpResponse<Validate>) pEventData).getData();
             if (adminValidate == null || Constants.SUCCESS != adminValidate.getSuccess()) {
-                AlertHelper.getAlertDialog(mBaseActivity, getString(R.string.string_account_may_be_suspended), getString(R.string.string_ok), null, null);
+                AlertHelper.showAlertDialog(mBaseActivity, getString(R.string.string_account_may_be_suspended), getString(R.string.string_ok), null, null);
             } else
                 openHomeActivity();
         }

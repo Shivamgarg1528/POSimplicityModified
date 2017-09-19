@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/factor_mdpi_10_dp"
         app:default_text_colors="true"
-        app:include_zip="false" />
+        app:include_zip="false"
+        app:include_security="false"/>
 
     <TextView
         android:id="@+id/fragment_payment_credit_tv_swipe"

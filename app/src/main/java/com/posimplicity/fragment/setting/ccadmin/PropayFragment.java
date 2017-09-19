@@ -56,19 +56,6 @@ public class PropayFragment extends BaseFragment implements View.OnClickListener
         updatePropayUi();
     }
 
-    private void updatePropayUi() {
-        if (Helper.isBlank(mPropay.getPayerId())) {
-            mViewCreatePropayPayerId.setVisibility(View.VISIBLE);
-            mViewDeletePropayPayerId.setVisibility(View.GONE);
-        } else {
-            mViewCreatePropayPayerId.setVisibility(View.GONE);
-            mViewDeletePropayPayerId.setVisibility(View.VISIBLE);
-        }
-
-        String propayPayerId = Helper.isBlank(mPropay.getPayerId()) ? getString(R.string.string_propay_payer_id_not_available) : mPropay.getPayerId();
-        mTextViewPropayPayerId.setText(getString(R.string.string_propay_payer_id_label) + " " + propayPayerId);
-    }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -92,7 +79,7 @@ public class PropayFragment extends BaseFragment implements View.OnClickListener
                     CardInfoModel cardInfoModel = new CardInfoModel();
                     cardInfoModel.setTransactionAmt("10.00");
                     cardInfoModel.setCardNumber("4444444444444448");
-                    cardInfoModel.setCardExpDate("12");
+                    cardInfoModel.setCardExpMonth("12");
                     cardInfoModel.setCardExpYear("18");
                     cardInfoModel.setCardHolderName("Garg");
 
@@ -184,5 +171,18 @@ public class PropayFragment extends BaseFragment implements View.OnClickListener
                 break;
             }
         }
+    }
+
+    private void updatePropayUi() {
+        if (Helper.isBlank(mPropay.getPayerId())) {
+            mViewCreatePropayPayerId.setVisibility(View.VISIBLE);
+            mViewDeletePropayPayerId.setVisibility(View.GONE);
+        } else {
+            mViewCreatePropayPayerId.setVisibility(View.GONE);
+            mViewDeletePropayPayerId.setVisibility(View.VISIBLE);
+        }
+
+        String propayPayerId = Helper.isBlank(mPropay.getPayerId()) ? getString(R.string.string_propay_payer_id_not_available) : mPropay.getPayerId();
+        mTextViewPropayPayerId.setText(getString(R.string.string_propay_payer_id_label) + " " + propayPayerId);
     }
 }

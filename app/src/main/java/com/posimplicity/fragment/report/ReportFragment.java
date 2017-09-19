@@ -90,7 +90,7 @@ public class ReportFragment extends ReportBaseFragment implements View.OnClickLi
                     stringBuilder.append("\n");
                 }
             }
-            AlertHelper.getAlertDialog(mBaseActivity, stringBuilder.toString(), getString(R.string.string_ok), null, null);
+            AlertHelper.showAlertDialog(mBaseActivity, stringBuilder.toString(), getString(R.string.string_ok), null, null);
         } else {
             Toast.makeText(mBaseActivity, String.format(getString(R.string.string_no_details_available_for), pReportParent.getName()), Toast.LENGTH_SHORT).show();
         }
@@ -100,7 +100,7 @@ public class ReportFragment extends ReportBaseFragment implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fragment_report_tv_clear: {
-                AlertHelper.getAlertDialog(mBaseActivity, String.format(getString(R.string.string_are_you_sure_you_want_to_clear) + " ?", mReportName), getString(R.string.string_yes), getString(R.string.string_no), new DialogInterface.OnClickListener() {
+                AlertHelper.showAlertDialog(mBaseActivity, String.format(getString(R.string.string_are_you_sure_you_want_to_clear) + " ?", mReportName), getString(R.string.string_yes), getString(R.string.string_no), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (which == DialogInterface.BUTTON_POSITIVE) {

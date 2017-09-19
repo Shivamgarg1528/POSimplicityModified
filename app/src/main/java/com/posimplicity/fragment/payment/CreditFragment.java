@@ -1,6 +1,5 @@
 package com.posimplicity.fragment.payment;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,14 +17,12 @@ import com.posimplicity.R;
 import com.posimplicity.dialog.SwipeCardDialog;
 import com.posimplicity.fragment.base.PaymentBaseFragment;
 import com.posimplicity.gateway.BaseGateway;
+import com.posimplicity.gateway.BridgeGateway;
 import com.posimplicity.gateway.PropayGateway;
 import com.posimplicity.model.local.CardInfoModel;
 import com.posimplicity.model.local.Setting;
-import com.posimplicity.model.response.gateway.BridgePayResponse;
 import com.service.BackgroundService;
 import com.utils.AppSharedPrefs;
-import com.utils.CardHelper;
-import com.utils.CheckCardInfo;
 import com.utils.Constants;
 import com.utils.Helper;
 import com.utils.MyStringFormat;
@@ -34,11 +31,10 @@ import java.util.LinkedHashMap;
 
 public class CreditFragment extends PaymentBaseFragment implements View.OnClickListener, CardValidCallback, EventListener {
 
-    private int mUsedGatewayPosition;
+    private int mUsedGatewayPosition = BaseGateway.GATEWAY_NONE;
     private boolean mCreditEncryptionEnable = false;
 
     private CreditCardForm mCreditCardForm;
-    private CreditCard mCreditCard;
 
     private Setting.AppSetting.Gateway mGatewaySettings;
 
@@ -52,7 +48,8 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        view.findViewById(R.id.fragment_payment_credit_tv_pay).setOnClickListener(this);
+        View viewPay = view.findViewById(R.id.fragment_payment_credit_tv_pay);
+        viewPay.setOnClickListener(this);
 
         View viewSwipe = view.findViewById(R.id.fragment_payment_credit_tv_swipe);
         viewSwipe.setOnClickListener(this);
@@ -64,24 +61,26 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
         mCreditEncryptionEnable = appSetting.getOtherSetting().getDetail().get(appSetting.getOtherSetting().getEncryptionForCC()).isEnable();
         mGatewaySettings = appSetting.getGateway();
 
-        getUsedGatewayPosition();
-
-        if (mUsedGatewayPosition == BaseGateway.GATEWAY_NONE) {
-            mCreditCardForm.setVisibility(View.INVISIBLE);
-            viewSwipe.setVisibility(View.INVISIBLE);
-        } else if (selectedGatewayInfoAvailable(true)) {
-            mCreditCardForm.setVisibility(View.VISIBLE);
-            viewSwipe.setVisibility(View.VISIBLE);
-        }
-    }
-
-    private void getUsedGatewayPosition() {
-        mUsedGatewayPosition = -1;
         for (int index = 0; index < mGatewaySettings.getDetail().size(); index++) {
             if (mGatewaySettings.getDetail().get(index).isEnable()) {
                 mUsedGatewayPosition = index;
                 break;
             }
+        }
+
+        if (mUsedGatewayPosition == BaseGateway.GATEWAY_NONE) {
+            mCreditCardForm.setVisibility(View.INVISIBLE);
+            viewSwipe.setVisibility(View.INVISIBLE);
+            viewPay.setVisibility(View.VISIBLE);
+        } else if (mUsedGatewayPosition == BaseGateway.GATEWAY_DEJAVOO
+                && selectedGatewayInfoAvailable(true)) {
+            mCreditCardForm.setVisibility(View.INVISIBLE);
+            viewSwipe.setVisibility(View.INVISIBLE);
+            viewPay.setVisibility(View.VISIBLE);
+        } else if (selectedGatewayInfoAvailable(true)) {
+            mCreditCardForm.setVisibility(View.VISIBLE);
+            viewSwipe.setVisibility(View.VISIBLE);
+            viewPay.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -90,93 +89,75 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
         switch (v.getId()) {
             case R.id.fragment_payment_credit_tv_pay: {
                 if (mUsedGatewayPosition == BaseGateway.GATEWAY_NONE) {
-                    mBaseActivity.showToast("Offline Payment");
-                } else if (mCreditCard == null) {
-                    mBaseActivity.showToast("Please Enter Card Information");
-                    return;
-                } else {
-                    startGatewayProcess(false);
-                    mCreditCardForm.clearForm();
-                    mCreditCard = null;
+                } else if (mUsedGatewayPosition == BaseGateway.GATEWAY_DEJAVOO) {
                 }
                 break;
             }
             case R.id.fragment_payment_credit_tv_swipe: {
-                new SwipeCardDialog(mBaseActivity).show(this);
+                new SwipeCardDialog(mBaseActivity, mCreditEncryptionEnable, this).show();
                 break;
             }
         }
     }
 
-    private void startGatewayProcess(boolean pCardManual) {
+    private void startGatewayProcess(CardInfoModel pCardInfoModel, boolean pCardManual) {
+        float payAmt = mPosApp.mOrderModel.orderAmountPaidModel.getAmountDue();
 
-        float payAmt = mGApp.mOrderModel.orderAmountPaidModel.getAmountDue();
-        CardInfoModel cardInfoModel = new CardInfoModel();
-        cardInfoModel.setTransactionAmt(MyStringFormat.formatWith2DecimalPlaces(payAmt));
-        cardInfoModel.setCardHolderName("");
-        if (pCardManual) {
-            cardInfoModel.setCardNumber(mCreditCard.getCardNumber().replace(" ", ""));
-            cardInfoModel.setCardExpDate(String.valueOf(mCreditCard.getExpMonth()));
-            cardInfoModel.setCardExpYear(String.valueOf(mCreditCard.getExpYear()));
-        } else {
-        }
+        pCardInfoModel.setTransactionAmt(MyStringFormat.formatWith2DecimalPlaces(payAmt));
+        pCardInfoModel.setEventListener(this);
 
-        cardInfoModel.setEventListener(this);
         switch (mUsedGatewayPosition) {
             case BaseGateway.GATEWAY_TSYS: {
                 if (pCardManual) {
-                    cardInfoModel.setTransType(BaseGateway.TRANSACTION_TSYS_KEYED);
-                    cardInfoModel.setCvv2Number(mCreditCard.getSecurityCode());
+                    pCardInfoModel.setTransType(BaseGateway.TRANSACTION_TSYS_KEYED);
                 } else {
-                    cardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_SWIPE);
-                    cardInfoModel.setCvv2Number(mCreditCard.getSecurityCode());
+                    pCardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_SWIPE);
                 }
                 break;
             }
             case BaseGateway.GATEWAY_PLUG_PAY: {
                 if (pCardManual) {
-                    cardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_KEYED);
+                    pCardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_KEYED);
                 } else {
-                    cardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_SWIPE);
+                    pCardInfoModel.setTransType(BaseGateway.TRANSACTION_PLUG_PAY_SWIPE);
                 }
                 break;
             }
             case BaseGateway.GATEWAY_BRIDGE_PAY: {
-                cardInfoModel.setTransType(BaseGateway.TRANSACTION_BRIDGE_KEYED);
+                pCardInfoModel.setTransType(BaseGateway.TRANSACTION_BRIDGE_KEYED);
+                new BridgeGateway(mBaseActivity).startGatewayProcess(pCardInfoModel);
                 break;
             }
             case BaseGateway.GATEWAY_PROPAY: {
-                cardInfoModel.setTransType(BaseGateway.TRANSACTION_PROPAY_KEYED);
-                new PropayGateway(mBaseActivity).startGatewayProcess(cardInfoModel);
+                pCardInfoModel.setTransType(BaseGateway.TRANSACTION_PROPAY_KEYED);
+                new PropayGateway(mBaseActivity).startGatewayProcess(pCardInfoModel);
                 break;
             }
             case BaseGateway.GATEWAY_DEJAVOO: {
-
                 break;
             }
         }
     }
 
-
     @Override
     public void startPaymentProcess() {
         // all due amount will become pay amount as we can't pay in parts
-        float payAmt = mGApp.mOrderModel.orderAmountPaidModel.getAmountDue();
+        float payAmt = mPosApp.mOrderModel.orderAmountPaidModel.getAmountDue();
 
-        mGApp.mOrderModel.orderAmountPaidModel.setAmountPaid(mGApp.mOrderModel.orderAmountPaidModel.getAmountPaid() + payAmt);
-        mGApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCredit(mGApp.mOrderModel.orderAmountPaidModel.getAmountPaidByCredit() + payAmt);
-        mGApp.mOrderModel.orderAmountPaidModel.setAmountDue(0.00f);
+        mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaid(mPosApp.mOrderModel.orderAmountPaidModel.getAmountPaid() + payAmt);
+        mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCredit(mPosApp.mOrderModel.orderAmountPaidModel.getAmountPaidByCredit() + payAmt);
+        mPosApp.mOrderModel.orderAmountPaidModel.setAmountDue(0.00f);
 
         //Update total due amount value on HomeActivity
         LocalBroadcastManager.getInstance(mBaseActivity)
                 .sendBroadcast(new Intent(Constants.ACTION_AMOUNT_PAID));
 
-        mGApp.mOrderModel.setOrderComment("");
-        mGApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CREDIT);
-        mGApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
+        mPosApp.mOrderModel.setOrderComment("");
+        mPosApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CREDIT);
+        mPosApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
 
         // saving order model data into preference for future use...
-        AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mGApp.mOrderModel);
+        AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mPosApp.mOrderModel);
 
         //Clear all data from home screen...
         LocalBroadcastManager.getInstance(mBaseActivity)
@@ -189,33 +170,38 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
     }
 
     private boolean selectedGatewayInfoAvailable(boolean pShownToast) {
-        boolean checkingCondition = false;
+        boolean preferenceSet = false;
         switch (mUsedGatewayPosition) {
             case BaseGateway.GATEWAY_TSYS: {
                 Setting.AppSetting.Gateway.TsysPay tsysPay = mGatewaySettings.getTsysPay();
-                if (!Helper.isBlank(tsysPay.getDeviceId()) && !Helper.isBlank(tsysPay.getMerchantId()) && !Helper.isBlank(tsysPay.getKey()) && !Helper.isBlank(tsysPay.getUserName()) && !Helper.isBlank(tsysPay.getPassword())) {
-                    checkingCondition = true;
+                if (!Helper.isBlank(tsysPay.getDeviceId())
+                        && !Helper.isBlank(tsysPay.getMerchantId())
+                        && !Helper.isBlank(tsysPay.getKey())
+                        && !Helper.isBlank(tsysPay.getUserName())
+                        && !Helper.isBlank(tsysPay.getPassword())) {
+                    preferenceSet = true;
                 }
                 break;
             }
             case BaseGateway.GATEWAY_PLUG_PAY: {
                 Setting.AppSetting.Gateway.PlugNPay plugNPay = mGatewaySettings.getPlugNPay();
                 if (!Helper.isBlank(plugNPay.getPlugNPayId())) {
-                    checkingCondition = true;
+                    preferenceSet = true;
                 }
                 break;
             }
             case BaseGateway.GATEWAY_BRIDGE_PAY: {
                 Setting.AppSetting.Gateway.BridgePay bridgePay = mGatewaySettings.getBridgePay();
-                if (!Helper.isBlank(bridgePay.getUserName()) && !Helper.isBlank(bridgePay.getUserPassword())) {
-                    checkingCondition = true;
+                if (!Helper.isBlank(bridgePay.getUserName())
+                        && !Helper.isBlank(bridgePay.getUserPassword())) {
+                    preferenceSet = true;
                 }
                 break;
             }
             case BaseGateway.GATEWAY_PROPAY: {
                 Setting.AppSetting.Gateway.ProPay propay = mGatewaySettings.getProPay();
                 if (!Helper.isBlank(propay.getPayerId())) {
-                    checkingCondition = true;
+                    preferenceSet = true;
                 }
                 break;
             }
@@ -223,37 +209,40 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
                 break;
             }
         }
-        if (pShownToast && !checkingCondition) {
+        if (pShownToast && !preferenceSet) {
             mBaseActivity.showToast("Please Provide Gateway Info Under Setting");
         }
-        return checkingCondition;
+        return preferenceSet;
     }
 
     @Override
     public void cardValid(CreditCard creditCard) {
-        this.mCreditCard = creditCard;
+        CardInfoModel cardInfoModel = new CardInfoModel();
+        cardInfoModel.setCardNumber(creditCard.getCardNumber().replace(" ", ""));
+        cardInfoModel.setCardExpYear(String.valueOf(creditCard.getExpYear()));
+        cardInfoModel.setCardExpMonth(String.valueOf(creditCard.getExpMonth()));
+
+        cardInfoModel.setCvv2Number(creditCard.getSecurityCode());
+        cardInfoModel.setCardHolderName("");
+        startGatewayProcess(cardInfoModel, true);
     }
 
     @Override
     public void onEvent(int pEventCode, Object pEventData) {
         switch (pEventCode) {
             case -1: {
-                String magStripData = (String) pEventData;
-                if (!mCreditEncryptionEnable) {
-                    CardHelper cardHelper = new CardHelper(magStripData);
-                    if (cardHelper.parseCardInfo()) {
-                    } else {
-                        new SwipeCardDialog(mBaseActivity).show(this);
-                    }
-                } else {
-
-                }
+                CardInfoModel cardInfoModel = (CardInfoModel) pEventData;
+                startGatewayProcess(cardInfoModel, false);
                 break;
             }
+            case BaseGateway.TRANSACTION_TSYS_KEYED:
+            case BaseGateway.TRANSACTION_TSYS_SWIPE:
+            case BaseGateway.TRANSACTION_TSYS_SWIPE_ENCRYPTED:
+            case BaseGateway.TRANSACTION_PROPAY_KEYED:
             case BaseGateway.TRANSACTION_BRIDGE_KEYED: {
-                BridgePayResponse bridgePayResponse = (BridgePayResponse) pEventData;
-                if (bridgePayResponse != null && bridgePayResponse.getResponse() != null && "Approved".equalsIgnoreCase(bridgePayResponse.getResponse().getRespMSG())) {
-                    mBaseActivity.showToast(getString(R.string.string_propay_payer_id_delete_successfully));
+                boolean isSuccess = (boolean) pEventData;
+                if (isSuccess) {
+                    startPaymentProcess();
                 } else {
                     ToastHelper.showDeclineToast(mBaseActivity);
                 }
@@ -269,25 +258,6 @@ public class CreditFragment extends PaymentBaseFragment implements View.OnClickL
                     if (responseMap.containsKey("surcharge")) {
                         surchargeAmt = responseMap.get("surcharge");
                     }
-                } else {
-                    ToastHelper.showDeclineToast(mBaseActivity);
-                }
-                break;
-            }
-            case BaseGateway.TRANSACTION_TSYS_KEYED:
-            case BaseGateway.TRANSACTION_TSYS_SWIPE:
-            case BaseGateway.TRANSACTION_TSYS_SWIPE_ENCRYPTED: {
-                boolean isSuccess = (boolean) pEventData;
-                if (isSuccess) {
-                } else {
-                    ToastHelper.showDeclineToast(mBaseActivity);
-                }
-                break;
-            }
-            case BaseGateway.TRANSACTION_PROPAY_KEYED: {
-                boolean isSuccess = (boolean) pEventData;
-                if (isSuccess) {
-                    startPaymentProcess();
                 } else {
                     ToastHelper.showDeclineToast(mBaseActivity);
                 }

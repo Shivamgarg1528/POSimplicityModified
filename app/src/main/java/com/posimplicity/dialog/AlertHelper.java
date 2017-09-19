@@ -12,7 +12,7 @@ import com.posimplicity.R;
 
 public class AlertHelper {
 
-    public static AlertDialog getAlertDialog(Context pContext, String pMessage, String pPositiveBtnTxt, String pNegativeBtnTxt, DialogInterface.OnClickListener pListener) {
+    public static void showAlertDialog(Context pContext, String pMessage, String pPositiveBtnTxt, String pNegativeBtnTxt, DialogInterface.OnClickListener pListener) {
         AlertDialog.Builder builder = new AlertDialog.Builder(pContext);
         builder.setMessage(pMessage);
         builder.setTitle(pContext.getString(R.string.app_name));
@@ -28,7 +28,6 @@ public class AlertHelper {
         AlertDialog alertDialog = builder.create();
         alertDialog.setCanceledOnTouchOutside(false);
         alertDialog.show();
-        return alertDialog;
     }
 
     public static AlertDialog getNoInternetAlert(Context pContext, String pNegativeBtnTxt, DialogInterface.OnClickListener pListener) {

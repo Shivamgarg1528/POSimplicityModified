@@ -81,7 +81,7 @@ public class TSYSPayGateway extends BaseGateway {
                     hashMap.put("transactionAmount", getFormattedAmount(pCardInfoModel.getTransactionAmt()));
                     hashMap.put("tip", getFormattedAmount(pCardInfoModel.getTipAmount()));
                     hashMap.put("cardNumber", pCardInfoModel.getCardNumber());
-                    hashMap.put("expirationDate", pCardInfoModel.getCardExpDate().concat(pCardInfoModel.getCardExpYear()));
+                    hashMap.put("expirationDate", pCardInfoModel.getCardExpMonth().concat(pCardInfoModel.getCardExpYear()));
                     hashMap.put("cvv2", pCardInfoModel.getCvv2Number());
                     hashMap.put("cardHolderName", pCardInfoModel.getCardHolderName());
                     hashMap.put("developerID", TSYS_DEVELOPER_ID);

@@ -56,12 +56,12 @@ public class CashFragment extends PaymentBaseFragment implements Keypad.KeypadCl
 
     @Override
     public void startPaymentProcess() {
-        mGApp.mOrderModel.setOrderComment("");
-        mGApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CASH);
-        mGApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
+        mPosApp.mOrderModel.setOrderComment("");
+        mPosApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CASH);
+        mPosApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
 
         // saving order model data into preference for future use...
-        AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mGApp.mOrderModel);
+        AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mPosApp.mOrderModel);
 
         //Clear all data from home screen...
         LocalBroadcastManager.getInstance(mBaseActivity)
@@ -81,16 +81,16 @@ public class CashFragment extends PaymentBaseFragment implements Keypad.KeypadCl
                 float enteredAmt = Float.parseFloat(mTextViewEnteredAmt.getText().toString());
                 float payAmt = 0.0f;
                 if (enteredAmt >= 0) {
-                    float dueAmt = mGApp.mOrderModel.orderAmountPaidModel.getAmountDue();
+                    float dueAmt = mPosApp.mOrderModel.orderAmountPaidModel.getAmountDue();
                     if (enteredAmt > dueAmt) { // we need to find change amount that will return to customer
                         payAmt = dueAmt;
-                        mGApp.mOrderModel.orderAmountPaidModel.setAmountChange(enteredAmt - payAmt);
+                        mPosApp.mOrderModel.orderAmountPaidModel.setAmountChange(enteredAmt - payAmt);
                     } else {
                         payAmt = enteredAmt;
                     }
-                    mGApp.mOrderModel.orderAmountPaidModel.setAmountPaid(mGApp.mOrderModel.orderAmountPaidModel.getAmountPaid() + payAmt);
-                    mGApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCash(mGApp.mOrderModel.orderAmountPaidModel.getAmountPaidByCash() + payAmt);
-                    mGApp.mOrderModel.orderAmountPaidModel.setAmountDue(dueAmt - payAmt);
+                    mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaid(mPosApp.mOrderModel.orderAmountPaidModel.getAmountPaid() + payAmt);
+                    mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCash(mPosApp.mOrderModel.orderAmountPaidModel.getAmountPaidByCash() + payAmt);
+                    mPosApp.mOrderModel.orderAmountPaidModel.setAmountDue(dueAmt - payAmt);
 
                     // reset value for new
                     mKeypad.onBind(0.00f, false);
@@ -99,8 +99,8 @@ public class CashFragment extends PaymentBaseFragment implements Keypad.KeypadCl
                     //Update total due amount value on HomeActivity
                     LocalBroadcastManager.getInstance(mBaseActivity).sendBroadcast(new Intent(Constants.ACTION_AMOUNT_PAID));
 
-                    if (mGApp.mOrderModel.orderAmountPaidModel.getAmountDue() == 0) {
-                        if (mGApp.mOrderModel.orderAmountPaidModel.getAmountChange() > 0) {
+                    if (mPosApp.mOrderModel.orderAmountPaidModel.getAmountDue() == 0) {
+                        if (mPosApp.mOrderModel.orderAmountPaidModel.getAmountChange() > 0) {
                             showChangeAmountDialog();
                             return;
                         }

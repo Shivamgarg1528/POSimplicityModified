@@ -87,7 +87,9 @@ public class PaymentActivity extends BaseActivity implements ViewPager.OnPageCha
     @Override
     public void onPageSelected(int position) {
         PaymentBaseFragment visibleFragment = (PaymentBaseFragment) ((FragmentStatePagerAdapter) mViewPager.getAdapter()).getItem(position);
-        if (visibleFragment instanceof CashFragment || visibleFragment instanceof CheckFragment || visibleFragment instanceof CreditFragment) {
+        if (visibleFragment instanceof CashFragment
+                || visibleFragment instanceof CheckFragment
+                || visibleFragment instanceof CreditFragment) {
             if (mImageViewOverFlow.getVisibility() != View.VISIBLE)
                 mImageViewOverFlow.setVisibility(View.VISIBLE);
         } else {

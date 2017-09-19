@@ -32,7 +32,7 @@ import com.utils.POSApp;
 
 public abstract class PaymentBaseFragment extends BaseFragment implements PopupMenu.OnMenuItemClickListener, OnTransactionIdCallback {
 
-    protected POSApp mGApp = POSApp.getInstance();
+    protected POSApp mPosApp = POSApp.getInstance();
 
     public abstract void startPaymentProcess();
 
@@ -41,7 +41,7 @@ public abstract class PaymentBaseFragment extends BaseFragment implements PopupM
             @Override
             public void onTransactionAssigned(CustomerParent.Customer pAssignedUser) {
                 Toast.makeText(mBaseActivity, "Customer Assigned", Toast.LENGTH_SHORT).show();
-                mGApp.mOrderModel.setOrderAssignCustomer(pAssignedUser);
+                mPosApp.mOrderModel.setOrderAssignCustomer(pAssignedUser);
             }
         }).show();
     }
@@ -55,14 +55,14 @@ public abstract class PaymentBaseFragment extends BaseFragment implements PopupM
             @Override
             public void onTransactionAssigned(CustomerParent.Customer pAssignedUser) {
                 Toast.makeText(mBaseActivity, "Clerk Assigned", Toast.LENGTH_SHORT).show();
-                mGApp.mOrderModel.setOrderAssignClerk(pAssignedUser);
+                mPosApp.mOrderModel.setOrderAssignClerk(pAssignedUser);
             }
         }).show();
     }
 
     protected void showChangeAmountDialog() {
-        String pChangeAmtMessage = "Change Amount : $" + MyStringFormat.formatWith2DecimalPlaces(mGApp.mOrderModel.orderAmountPaidModel.getAmountChange());
-        AlertHelper.getAlertDialog(mBaseActivity, pChangeAmtMessage, mBaseActivity.getString(R.string.string_ok), null, new DialogInterface.OnClickListener() {
+        String pChangeAmtMessage = "Change Amount : $" + MyStringFormat.formatWith2DecimalPlaces(mPosApp.mOrderModel.orderAmountPaidModel.getAmountChange());
+        AlertHelper.showAlertDialog(mBaseActivity, pChangeAmtMessage, mBaseActivity.getString(R.string.string_ok), null, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startPaymentProcess();
@@ -106,40 +106,40 @@ public abstract class PaymentBaseFragment extends BaseFragment implements PopupM
     @Override
     public void onTransactionIdCallback(String pTransId) {
 
-        mGApp.mOrderModel.setOrderId(pTransId);
-        float billAmt = mGApp.mOrderModel.orderAmountPaidModel.getAmount();
+        mPosApp.mOrderModel.setOrderId(pTransId);
+        float billAmt = mPosApp.mOrderModel.orderAmountPaidModel.getAmount();
 
         // Recycle Object First
-        mGApp.mOrderModel.orderAmountPaidModel = new AmountPaidModel();
+        mPosApp.mOrderModel.orderAmountPaidModel = new AmountPaidModel();
 
-        mGApp.mOrderModel.orderAmountPaidModel.setAmount(billAmt);
-        mGApp.mOrderModel.orderAmountPaidModel.setAmountPaid(billAmt);
-        mGApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
+        mPosApp.mOrderModel.orderAmountPaidModel.setAmount(billAmt);
+        mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaid(billAmt);
+        mPosApp.mOrderModel.setOrderStatus(Constants.ORDER_STATUS_COMPLETE);
 
         if (PaymentBaseFragment.this instanceof CashFragment) {
-            mGApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CASH);
-            mGApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCash(billAmt);
+            mPosApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CASH);
+            mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCash(billAmt);
         } else if (PaymentBaseFragment.this instanceof CheckFragment) {
-            mGApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CHECK);
-            mGApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCheck(billAmt);
+            mPosApp.mOrderModel.setOrderPaymentMode(Constants.PAYMENT_MODE_CHECK);
+            mPosApp.mOrderModel.orderAmountPaidModel.setAmountPaidByCheck(billAmt);
         }
 
         mBaseActivity.showProgressDialog();
-        ApisController.createOrder(mBaseActivity, mGApp.mOrderModel, new EventListener() {
+        ApisController.createOrder(mBaseActivity, mPosApp.mOrderModel, new EventListener() {
             @Override
             public void onEvent(int pEventCode, Object pEventData) {
                 mBaseActivity.dismissProgressDialog();
                 Validate validate = ((EasyHttpResponse<Validate>) pEventData).getData();
                 if (Helper.verifyCreateOrder(mBaseActivity, validate, true)) {
                     ToastHelper.showApprovedToast(mBaseActivity);
-                    AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mGApp.mOrderModel);
+                    AppSharedPrefs.getInstance(mBaseActivity).setOrderModel(mPosApp.mOrderModel);
                     LocalBroadcastManager.getInstance(mBaseActivity).sendBroadcast(new Intent(Constants.ACTION_CLEAR));
                     BackgroundService.start(mBaseActivity, BackgroundService.ACTION_SAVE_ORDER_MANUAL);
                     mBaseActivity.finish();
                 } else {
-                    float billAmt = mGApp.mOrderModel.orderAmountPaidModel.getAmount();
-                    mGApp.mOrderModel.orderAmountPaidModel = new AmountPaidModel();
-                    mGApp.mOrderModel.orderAmountPaidModel.setAmount(billAmt);
+                    float billAmt = mPosApp.mOrderModel.orderAmountPaidModel.getAmount();
+                    mPosApp.mOrderModel.orderAmountPaidModel = new AmountPaidModel();
+                    mPosApp.mOrderModel.orderAmountPaidModel.setAmount(billAmt);
                 }
             }
         });

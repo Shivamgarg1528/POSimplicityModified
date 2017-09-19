@@ -31,7 +31,7 @@ public class PlugPayGateway extends BaseGateway {
 
         switch (pCardInfoModel.getTransType()) {
             case TRANSACTION_PLUG_PAY_KEYED: {
-                queryMap.put("card-exp", pCardInfoModel.getCardExpDate().concat(pCardInfoModel.getCardExpYear()));
+                queryMap.put("card-exp", pCardInfoModel.getCardExpMonth().concat(pCardInfoModel.getCardExpYear()));
                 queryMap.put("card-number", pCardInfoModel.getCardNumber());
                 queryMap.put("card-name", pCardInfoModel.getCardHolderName());
                 break;

@@ -16,6 +16,7 @@ public class EncryptedCardInfo {
 	private String deviceSerialNo = "";
 	private String encryptedSessionId = "";
 	private String cardInfo;
+
 	private final String SEPERATOR = "\\|";
 	private final int  MUST_HAVE_PIPES = 12;
 

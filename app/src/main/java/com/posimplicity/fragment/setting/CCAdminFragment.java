@@ -79,7 +79,7 @@ public class CCAdminFragment extends BaseFragment implements EventListener {
                     break;
                 }
                 case BaseGateway.GATEWAY_BRIDGE_PAY: {
-                    baseFragment = new PropayFragment();
+                    baseFragment = new BridgepayFragment();
                     break;
                 }
                 case BaseGateway.GATEWAY_PROPAY: {

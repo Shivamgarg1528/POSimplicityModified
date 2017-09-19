@@ -14,14 +14,10 @@ import com.utils.AppSharedPrefs;
 import com.utils.Constants;
 import com.utils.CreditCardHelper;
 import com.utils.Helper;
-import com.utils.MyPreferences;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
-import static com.PosInterfaces.PrefrenceKeyConst.PAYMENT_METHOD_ID_PROPAY;
 
 public class PropayGateway extends BaseGateway {
 
@@ -59,7 +55,7 @@ public class PropayGateway extends BaseGateway {
                     JSONObject jsonObject = new JSONObject();
                     try {
                         jsonObject.put("AccountNumber", pCardInfoModel.getCardNumber());
-                        jsonObject.put("ExpirationDate", pCardInfoModel.getCardExpDate().concat(pCardInfoModel.getCardExpYear()));
+                        jsonObject.put("ExpirationDate", pCardInfoModel.getCardExpMonth().concat(pCardInfoModel.getCardExpYear()));
                         jsonObject.put("AccountName", pCardInfoModel.getCardHolderName());
                         jsonObject.put("PaymentMethodType", ccType);
                         jsonObject.put("PayerAccountId", payerId);
@@ -74,9 +70,10 @@ public class PropayGateway extends BaseGateway {
                         String payerUrl = "/" + payerId + "/PaymentMethods/ProcessedTransactions";
                         JSONObject jsonObject = new JSONObject();
                         try {
+                            int transactionAmt = (int) Math.ceil(Double.parseDouble(pCardInfoModel.getTransactionAmt()));
                             jsonObject.put("PayerAccountId", payerId);
                             jsonObject.put("paymentMethodID", propayMethodId.getPaymentMethodId());
-                            jsonObject.put("Amount", pCardInfoModel.getTransactionAmt());
+                            jsonObject.put("Amount", transactionAmt);
                             jsonObject.put("CurrencyCode", "USD");
                         } catch (Exception ignored) {
                             ignored.printStackTrace();

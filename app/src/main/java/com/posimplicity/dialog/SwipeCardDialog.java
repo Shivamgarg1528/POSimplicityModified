@@ -3,32 +3,33 @@ package com.posimplicity.dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.CustomControls.ToastHelper;
-import com.craftman.cardform.Card;
 import com.easylibs.listener.EventListener;
 import com.posimplicity.R;
+import com.posimplicity.model.local.CardInfoModel;
+import com.utils.CardHelper;
 
 public class SwipeCardDialog extends BaseAlert implements TextWatcher, Runnable, DialogInterface.OnCancelListener {
 
-    private Context mContext;
+    private final Context mContext;
+    private final boolean mCreditEncryptionEnable;
+    private final EventListener mEventListener;
+
     private View mParentView;
     private EditText mEditCardInfo;
     private boolean mDialogDismissed;
-    private EventListener mEventListener;
 
-    public SwipeCardDialog(@NonNull Context context) {
-        super(context);
-        mContext = context;
+    public SwipeCardDialog(@NonNull Context pContext, boolean pCreditEncryptionEnable, EventListener pEventListener) {
+        super(pContext);
+        mContext = pContext;
+        mCreditEncryptionEnable = pCreditEncryptionEnable;
+        mEventListener = pEventListener;
     }
 
     @Override
@@ -44,7 +45,6 @@ public class SwipeCardDialog extends BaseAlert implements TextWatcher, Runnable,
         setFocusAgain();
         onDimnessDisable();
 
-        mEditCardInfo.setText("1");
         setOnCancelListener(this);
     }
 
@@ -60,17 +60,10 @@ public class SwipeCardDialog extends BaseAlert implements TextWatcher, Runnable,
 
     @Override
     public void afterTextChanged(Editable s) {
-        if (s.length() > 0 && s.length() < 100) {
+        if (s.length() > 0) {
             mParentView.setVisibility(View.VISIBLE);
             mEditCardInfo.removeCallbacks(this);
             mEditCardInfo.postDelayed(this, 200);
-            new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Editable text = mEditCardInfo.getText();
-                    mEditCardInfo.setText(text.toString().concat("1"));
-                }
-            }, 100);
         }
     }
 
@@ -78,9 +71,37 @@ public class SwipeCardDialog extends BaseAlert implements TextWatcher, Runnable,
     public void run() {
         if (!mDialogDismissed) {
             mParentView.setVisibility(View.INVISIBLE);
-            String magStripCardData = mEditCardInfo.getText().toString();
-            this.mEventListener.onEvent(-1, magStripCardData);
-            dismiss();
+            String cardInfo = mEditCardInfo.getText().toString();
+            CardInfoModel cardInfoModel = new CardInfoModel();
+            if (!mCreditEncryptionEnable) {
+                CardHelper cardHelper = new CardHelper(cardInfo);
+                if (cardHelper.parseNonEncryptedCardInfo()) {
+                    cardInfoModel.setCardHolderName(cardHelper.getCardHolderName());
+                    cardInfoModel.setCardExpYear(cardHelper.getCardExpiryYear());
+                    cardInfoModel.setCardExpMonth(cardHelper.getCardExpiryMonth());
+                    cardInfoModel.setCardNumber(cardHelper.getCardNumber());
+                    cardInfoModel.setCardTrack1(cardHelper.getTrackData1());
+                    cardInfoModel.setCardTrack2(cardHelper.getTrackData2());
+                    cardInfoModel.setCardMagData(cardHelper.getMagStripData());
+                    cardInfoModel.setCardTypeFullName(cardHelper.getCcTypeFullName());
+                    cardInfoModel.setCardTypeShortName(cardHelper.getCcTypeShortName());
+                    mEventListener.onEvent(-1, cardInfoModel);
+                    dismiss();
+                } else {
+                    setFocusAgain();
+                }
+            } else {
+                CardHelper cardHelper = new CardHelper(cardInfo);
+                if (cardHelper.parseEncryptedCardInfo()) {
+                    cardInfoModel.setCardTrack1(cardHelper.getTrackData1());
+                    cardInfoModel.setCardTrack2(cardHelper.getTrackData2());
+                    cardInfoModel.setKsn(cardHelper.getKsn());
+                    mEventListener.onEvent(-1, cardInfoModel);
+                    dismiss();
+                } else {
+                    setFocusAgain();
+                }
+            }
         }
     }
 
@@ -94,10 +115,5 @@ public class SwipeCardDialog extends BaseAlert implements TextWatcher, Runnable,
     public void onCancel(DialogInterface dialog) {
         mDialogDismissed = true;
         mEditCardInfo.removeTextChangedListener(this);
-    }
-
-    public void show(EventListener pEventListener) {
-        this.mEventListener = pEventListener;
-        show();
     }
 }

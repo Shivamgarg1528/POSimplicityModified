@@ -50,7 +50,7 @@ public class SwitchAdapter extends RecyclerView.Adapter<SwitchAdapter.ViewHolder
                     String disableOrEnable = detail.isEnable() ? "Disable" : "Enable";
                     String message = String.format("Are You Sure You Want To %s %s ?", disableOrEnable, detail.getName());
                     Context localContext = holder.mImageViewState.getContext();
-                    AlertHelper.getAlertDialog(localContext, message, localContext.getString(R.string.string_yes), localContext.getString(R.string.string_no), new DialogInterface.OnClickListener() {
+                    AlertHelper.showAlertDialog(localContext, message, localContext.getString(R.string.string_yes), localContext.getString(R.string.string_no), new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             if (which == DialogInterface.BUTTON_POSITIVE) {

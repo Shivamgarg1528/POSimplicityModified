@@ -12,7 +12,11 @@ public class CardHelper {
     private static final String REGEX_DISCOVER = "^6(?:011|5[0-9]{2})[0-9]{12}$";
     private static final String REGEX_JCB = "^(?:2131|1800|35\\d{3})\\d{11}$";
 
-    private String magStripeData;
+    private static final String SEPARATOR = "\\|";
+    private static final int ENCRYPTED_CARD_PIPES = 12;
+
+    private String cardSwipeData;
+    private String magStripData;
 
     private String cardHolderName;
     private String cardExpiryMonth;
@@ -22,13 +26,18 @@ public class CardHelper {
     private String ccTypeShortName;
     private String trackData1;
     private String trackData2;
+    private String ksn;
 
-    public CardHelper(String magStripeData) {
-        this.magStripeData = magStripeData;
+    public CardHelper(String cardSwipeData) {
+        this.cardSwipeData = cardSwipeData;
     }
 
-    public String getMagStripeData() {
-        return magStripeData;
+    public String getCardSwipeData() {
+        return cardSwipeData;
+    }
+
+    public String getMagStripData() {
+        return magStripData;
     }
 
     public String getCardHolderName() {
@@ -63,8 +72,12 @@ public class CardHelper {
         return trackData2;
     }
 
-    public boolean parseCardInfo() {
-        List<String> cardInfoInList = Arrays.asList(magStripeData.split("\\^"));
+    public String getKsn() {
+        return ksn;
+    }
+
+    public boolean parseNonEncryptedCardInfo() {
+        List<String> cardInfoInList = Arrays.asList(cardSwipeData.split("\\^"));
         if (cardInfoInList != null && !cardInfoInList.isEmpty() && cardInfoInList.size() > 2) {
             String stringAfterSecondCarrot = cardInfoInList.get(2);
             if (stringAfterSecondCarrot.contains("?;")
@@ -77,7 +90,8 @@ public class CardHelper {
                 cardNumber = stringAfterSecondCarrot.substring(indexOfFirstToken + 2, indexOfSecondToken);
                 cardExpiryMonth = stringAfterSecondCarrot.substring(indexOfSecondToken + 3, indexOfSecondToken + 5);
                 cardExpiryYear = stringAfterSecondCarrot.substring(indexOfSecondToken + 1, indexOfSecondToken + 3);
-                trackData1 = magStripeData.substring(0, magStripeData.indexOf("?;") + 1);
+                magStripData = stringAfterSecondCarrot.substring(indexOfFirstToken + 2);
+                trackData1 = cardSwipeData.substring(0, cardSwipeData.indexOf("?;") + 1);
                 trackData2 = stringAfterSecondCarrot.substring(indexOfFirstToken + 1);
                 cardHolderName = getCardHolderNameFromString(cardInfoInList.get(1));
                 ccTypeFullName = getCCType(cardNumber);
@@ -87,6 +101,17 @@ public class CardHelper {
                 return false;
         } else
             return false;
+    }
+
+    public boolean parseEncryptedCardInfo() {
+        List<String> separatorList = Arrays.asList(cardSwipeData.split(SEPARATOR));
+        if (separatorList.size() == ENCRYPTED_CARD_PIPES + 1) {
+            trackData1 = separatorList.get(2);
+            trackData2 = separatorList.get(3);
+            ksn = separatorList.get(9);
+            return true;
+        }
+        return false;
     }
 
     private String getCardHolderNameFromString(String pNameOnCardString) {

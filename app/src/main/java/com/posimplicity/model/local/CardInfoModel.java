@@ -7,12 +7,15 @@ public class CardInfoModel {
 
     private String cardHolderName;
     private String cardNumber;
-    private String cardExpDate;
+    private String cardExpMonth;
     private String cardExpYear;
     private String cardTrack1;
     private String cardTrack2;
+
+    private String cardTypeFullName;
+    private String cardTypeShortName;
+
     private String cardMagData;
-    private String cardSwipeData;
     private String cvv2Number;
     private String ksn;
 
@@ -41,12 +44,12 @@ public class CardInfoModel {
         this.cardNumber = cardNumber;
     }
 
-    public String getCardExpDate() {
-        return cardExpDate;
+    public String getCardExpMonth() {
+        return cardExpMonth;
     }
 
-    public void setCardExpDate(String cardExpDate) {
-        this.cardExpDate = cardExpDate;
+    public void setCardExpMonth(String cardExpDate) {
+        this.cardExpMonth = cardExpDate;
     }
 
     public String getCardExpYear() {
@@ -69,6 +72,22 @@ public class CardInfoModel {
         return cardTrack2;
     }
 
+    public String getCardTypeFullName() {
+        return cardTypeFullName;
+    }
+
+    public void setCardTypeFullName(String cardTypeFullName) {
+        this.cardTypeFullName = cardTypeFullName;
+    }
+
+    public String getCardTypeShortName() {
+        return cardTypeShortName;
+    }
+
+    public void setCardTypeShortName(String cardTypeShortName) {
+        this.cardTypeShortName = cardTypeShortName;
+    }
+
     public void setCardTrack2(String cardTrack2) {
         this.cardTrack2 = cardTrack2;
     }
@@ -79,14 +98,6 @@ public class CardInfoModel {
 
     public void setCardMagData(String cardMagData) {
         this.cardMagData = cardMagData;
-    }
-
-    public String getCardSwipeData() {
-        return cardSwipeData;
-    }
-
-    public void setCardSwipeData(String cardSwipeData) {
-        this.cardSwipeData = cardSwipeData;
     }
 
     public String getTransactionAmt() {
@@ -143,26 +154,5 @@ public class CardInfoModel {
 
     public void setKsn(String ksn) {
         this.ksn = ksn;
-    }
-
-    @Override
-    public String toString() {
-        return "CardInfoModel{" +
-                "cardHolderName='" + cardHolderName + '\'' +
-                ", cardNumber='" + cardNumber + '\'' +
-                ", cardExpDate='" + cardExpDate + '\'' +
-                ", cardExpYear='" + cardExpYear + '\'' +
-                ", cardTrack1='" + cardTrack1 + '\'' +
-                ", cardTrack2='" + cardTrack2 + '\'' +
-                ", cardMagData='" + cardMagData + '\'' +
-                ", cardSwipeData='" + cardSwipeData + '\'' +
-                ", cvv2Number='" + cvv2Number + '\'' +
-                ", ksn='" + ksn + '\'' +
-                ", transactionAmt='" + transactionAmt + '\'' +
-                ", tipAmount='" + tipAmount + '\'' +
-                ", response='" + response + '\'' +
-                ", transType=" + transType +
-                ", eventListener=" + eventListener +
-                '}';
     }
 }

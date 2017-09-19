@@ -49,7 +49,7 @@ public class SetupFragment extends BaseFragment implements EventListener {
         super.onViewCreated(view, savedInstanceState);
         boolean pAppSetup = MyPreferences.getBooleanPrefrences(PrefrenceKeyConst.IS_APP_SETUP, mBaseActivity);
         if (pAppSetup) {
-            AlertHelper.getAlertDialog(mBaseActivity, "Do you want to sync the application ?", "Yes", "Skip", new DialogInterface.OnClickListener() {
+            AlertHelper.showAlertDialog(mBaseActivity, "Do you want to sync the application ?", "Yes", "Skip", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.dismiss();
